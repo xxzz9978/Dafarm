@@ -18,7 +18,7 @@ import kr.co.dafarm.dao.SellerProductDao;
 @Service
 public class SellerProductService {
 
-	@Value("${path.upload")
+	@Value("${path.upload}")
 	private String path_upload;
 
 	@Autowired
