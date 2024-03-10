@@ -18,7 +18,7 @@ public interface SellerOrderMapper {
 	// 주문 데이터를 주문 테이블에 추가하는 쿼리 - (최종 수정 : 김지섭)
 	@Insert("insert into seller_order_table(order_number, order_status, order_date, delivery_company, delivery_number, seller_name, seller_phone, item_name, "
 			+ "user_name, user_phone, address, seller_num, user_num) "
-			+ "values (order_seq.nextval, '결제완료', #{order_date}, 'Null', 'Null', #{seller_name}, #{seller_phone}, "
+			+ "values (order_seq.nextval, '결제완료', #{order_date}, '배송 준비중', '배송 준비중', #{seller_name}, #{seller_phone}, "
 			+ "#{item_name}, #{user_name}, #{user_phone}, #{address}, #{seller_num}, #{user_num})")
 	void addOrderInfo(SellerOrderBean addOrderBean);
 	
