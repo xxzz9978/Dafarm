@@ -1,0 +1,51 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*상품정보, 결제 방법 폰트 결정*/
+.intro_bg {
+    background-color: rgba(0, 0, 0, 0.05);
+    /*background-image: url("img/back_1.png");*/
+    border-bottom: rgba(0, 0, 0, 0.3) groove 0.05px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1280px;
+    height: 1000px;
+}
+
+.main {
+	width: 1280px;
+	height: 600px;
+	margin: 50px auto 20px auto;
+}
+.container-fluid {
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	width: 1280px;
+	margin-top: 50px;
+}
+
+.card-body {
+	position: relative;
+	width: auto;
+}
+
+#market_price{
+	width: 1240px;
+	height: 500px;
+}
+
+.datatable-container{
+	position: relative;
+}
+
+.datatable-selector {
+	width: 100px !important;
+}

@@ -1,0 +1,425 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.side{
+    position: fixed;
+    width: 270px;
+    height: 1080px;
+    background-color: rgb(255, 255, 255);
+    border-right: 1.5px solid rgb(184, 184, 184);
+    z-index: 2;
+}
+td a{
+	text-decoration: none;
+	color:black;
+}
+
+td a:hover {
+	font-weight: 700;
+}
+.top {
+    position: fixed;
+    width: 1650px;
+    left: 271px;
+    height: 55px;
+    background-color: white;
+    border-bottom: 1.5px solid rgb(184, 184, 184);
+    z-index: 1;
+}
+
+.top a {
+    position: absolute;
+    text-decoration: none;
+    color: gray;
+    left: 1520px;
+    top: 17px;
+}
+
+.DafarmLogo img{
+    position: absolute;
+    left: 65px;
+    width: 150px;
+    top: -15px;
+
+}
+
+.SellerInfo1 {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    top: 105px;
+    left: 33px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.SellerImg img{
+    position: absolute;
+    width: 70px;
+    left: 65px;
+    top:30px;
+}
+
+.SellerImg #seller{
+    position: absolute;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    top: 90px;
+    right: 70px;
+}
+
+.SellerImg #premium{
+    position: absolute;
+    color: gray;
+    font-size: 14px;
+    top: 125px;
+    right: 48px;
+}
+
+.SellerInfo1 button{
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    top: 180px;
+    border-radius: 5px;
+    border: 1px solid rgb(141, 141, 141);
+}
+
+.SellerInfo1 a{
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 14px;
+}
+
+.nav{
+    position: relative;
+    width: 270px;
+    height: 600px;
+    border-top: 1px solid rgb(194, 194, 194);
+    top: 150px;
+}
+
+.simple img{
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
+    background-color: none;
+}
+
+.simple a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.order img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: none;
+}
+
+.order{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 130px;
+}
+
+.order a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.store img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.store{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 210px;
+}
+
+.store a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.premium img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.premium{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 290px;
+}
+
+.premium a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.menu img{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.menu{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 370px;
+}
+
+.menu a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    filter: invert(54%) sepia(26%) saturate(5346%) hue-rotate(118deg) brightness(101%) contrast(96%);}
+
+
+main{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 1650px;
+    height: auto;
+    min-height: 855px;
+    top: 60px;
+    left: 275px;
+    z-index: 0;
+}
+.notice {
+	position: absolute;
+	left: 120px;
+	top: 8px;
+}
+
+.admin_notice_seller{
+	position: absolute;
+	width: 1400px;
+	height: 100px;
+	border: 1px solid rgb(192, 192, 192);
+	border-radius: 5px;
+	left: 120px;
+	top: 60px;
+}
+
+.kamis {
+	position: absolute;
+	left: 120px;
+	top: 255px;
+}
+
+.kamis_list {
+	position: absolute;
+	width: 1400px;
+	height: 220px;
+	border: 1px solid rgb(192, 192, 192);
+	border-radius: 5px;
+	left: 120px;
+	top: 350px;
+	border: 1px solid;
+}
+
+.click {
+	width: 17px;
+	opacity: 0.5;
+}
+
+.order_h1 {
+    position: absolute;
+    left: 120px;
+    top:545px;
+}
+
+.order_list {
+    position: absolute;
+	width: 690px;
+	height: 200px;
+	border: 1px solid rgb(172, 172, 172);
+	border-radius: 5px;
+	left: 120px;
+	top: 600px;
+}
+
+.order_list a {
+	text-decoration: none;
+	color: black;
+}
+
+.todaytr{
+  color: gray;
+}
+
+
+.price_list {
+	position: absolute;
+	width: 690px;
+	height: 200px;
+	border: 1px solid rgb(172, 172, 172);
+	border-radius: 5px;
+	left: 830px;
+	top: 600px;
+}
+
+.price_h1 {
+	position: absolute;
+	left: 830px;
+	top: 545px;
+}
+
+.price_list a {
+	text-decoration: none;
+	color: black;
+}
+
+.todaytd{
+    font-size: 16px;
+    color: gray;
+}
+
+.text{
+    width: 170px;
+
+}
+
+.count_td{
+    width: 450px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bolder;
+     justify-content: center;
+}
+
+
+.kamis_name{
+	position: absolute;
+	left: 120px;
+	top:175px;
+}
+/* 시세표 */
+.kamis_table_name{
+	display: flex;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 1280px;
+}
+
+.card-body {
+    width: auto;
+    border: none !important;
+}
+
+.table_price{
+	width: auto;
+}
+
+.datatable-container{
+	height: 200px !important;
+	overflow: auto;
+}
+
+#market_price tr{
+	border: none;
+	text-align: center;
+}
+
+#market_price td{
+	border-bottom: 1px solid lightgray;
+	border-color: lightgray;
+	text-align: center;
+}
+
+#market_price th{
+	border-bottom: 1px solid lightgray;
+	border-color: lightgray;
+	text-align: center;
+}
+
+.kamis_table{
+	position:relative;
+	width: 1400px;
+	height: 300px;
+	left: 120px;
+	border: 1px solid rgb(172, 172, 172);
+	border-radius:5px;
+	top:230px;
+}
+
+#boardDatatablesSimple{
+	 width: 1380px;
+    text-align: center;
+}

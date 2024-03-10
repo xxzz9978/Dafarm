@@ -1,0 +1,123 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+.intro_bg {
+    background-color: rgba(0, 0, 0, 0.05);
+    /*background-image: url("img/back_1.png");*/
+    border-bottom: rgba(0, 0, 0, 0.3) groove 0.05px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+}
+/* 제목 */
+.index_main {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#post {
+    text-align: center;
+    width: 1280px;
+    border-bottom: 3px solid lightgray;
+    padding-bottom: 20px;
+}
+
+/*table style*/
+.inquiry_list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 550px;
+    margin-top: 20px;
+}
+
+.inquiry_table {
+    width: 1280px;
+    text-align: center;
+    margin: 10px;
+}
+
+.board_title{
+	width: 50%;
+}
+
+.inquiry_tr{
+	background-color: #003b1f;
+}
+
+.inquiry_tr th{
+	color: #fff;
+	border: 1px solid lightgray;
+}
+
+tr {
+    height: 50px !important;
+}
+
+td a:hover {
+	font-weight: 700;
+}
+
+tr,
+th,
+td {
+    border: 1px solid rgba(0, 59, 31, 0.3);
+}
+
+tbody tr input{
+    background-color: transparent;
+    border: transparent;
+    font-size: 16px;
+}
+
+/* page 수 */
+.main_footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    color: black;
+}
+
+.input_post {
+	width: 1280px;
+}
+
+.input_post ul{
+	display: flex;
+	justify-content: center;
+}
+
+.input_post li{
+	margin: 10px;
+}
+.input_post li:hover{
+	font-weight: 700;
+}
+
+/*글쓰기 버튼*/
+.post_footer_btn{
+	justify-content: right;
+}
+.post_footer_btn a {
+    background-color: transparent;
+    float: right;
+    border: 1PX solid #003b1f;
+    border-radius: 10px;
+    font-size: 20PX;
+    padding: 10PX;
+    cursor: pointer;
+    color: #003b1f;
+}
+.post_footer_btn a:hover{
+    background-color: #003b1f;
+    color: white;
+}

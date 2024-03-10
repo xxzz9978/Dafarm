@@ -1,0 +1,262 @@
+/* 프리미엄 페이지 제목 */
+.PremiumTitle {
+	font-weight: bold;
+	font-size: 40px;
+	color: #003b1f;
+	margin-left: 60px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	width: 500px;
+	height: 50px;
+}
+/* 프리미엄 페이지 컨테이너 */
+.PremiumContainer {
+	display: flex;
+}
+/* 즐겨찾기 품목 컨테이너 */
+.BookMarkContainer {
+	/* border: 1px solid black; */
+	width: 870px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	margin-left: 50px;
+}
+/* 즐겨찾기 제목 */
+.BookMarkTitle {
+	font-weight: bold;
+	font-size: 25px;
+	color: #003b1f;
+	margin-left: 15px;
+	margin-top: 5px;
+	width: 300px;
+	height: 50px;
+}
+/* 즐겨찾기 헤더 */
+.BookMarkHeader {
+	display: flex;
+	text-align: center;
+	border-bottom: 1px solid darkgray;
+	height: 25px;
+	padding-bottom: 10px;
+}
+
+.BookHeaderName {
+	width: 200px;
+}
+
+.BookHeaderMeasure {
+	width: 60px;
+}
+
+.BookHeaderPrice {
+	width: 80px;
+}
+
+.BookHeaderYesterday {
+	width: 80px
+}
+
+.BookHeaderRatio {
+	width: 50px;
+}
+
+.BookHeaderVolume {
+	width: 100px;
+}
+
+.BookHeaderRegist {
+	width: 100px;
+}
+
+.BookHeaderSell {
+	width: 80px;
+}
+
+.BookHeaderProfit {
+	width: 120px;
+}
+/* 즐겨찾기 데이터 부분 */
+.BookMarkContent {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	height: 15px;
+	margin-top: 15px;
+}
+
+.BookContentName {
+	width: 200px;
+}
+
+.BookContentMeasure {
+	width: 60px;
+}
+
+.BookContentPrice {
+	width: 80px;
+}
+
+.BookContentYesterday {
+	width: 80px;
+}
+/* 등락률 div 부분 */
+.BookContentRatio {
+	width: 50px;
+	align-items: center;
+	display: flex;
+}
+
+.RatioTriangle {
+	width: 20px;
+}
+
+.RatioText {
+	width: 30px;
+}
+
+.BookContentVolume {
+	width: 100px;
+}
+
+.BookContentRegist {
+	width: 100px;
+}
+
+.BookContentSell {
+	width: 80px;
+}
+
+.BookContentProfit {
+	width: 120px;
+}
+/* 수익 그래프 파이차트 */
+.ProfitGraphContainer {
+	/* border: 1px solid black; */
+	width: 500px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	margin-left: 70px;
+	align-items: center;
+}
+
+.ProfitGraphTitle {
+	font-weight: bold;
+	font-size: 25px;
+	color: #003b1f;
+	margin-left: 15px;
+	margin-top: 5px;
+	width: 500px;
+	height: 50px;
+}
+
+.ProfitPieChartContainer {
+	width: 400px;
+	height: 400px;
+}
+/* 수익 바 그래프 */
+.ProfitInfoContainer {
+	/* border: 1px solid black; */
+	width: 850px;
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	margin-top: -180px;
+	margin-left: 50px;
+}
+
+.ProfitInfoTitle {
+	font-weight: bold;
+	font-size: 25px;
+	color: #003b1f;
+	margin-left: 15px;
+	margin-top: 5px;
+	width: 400px;
+	height: 50px;
+}
+
+.ProfitInfoBarChartContainer {
+	width: 800px;
+	margin-left: 30px;
+}
+
+/* 최근 거래 내역 */
+.RecentTradeContainer {
+	/* border: 1px solid black; */
+	width: 570px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.RecentTradeTitle {
+	font-weight: bold;
+	font-size: 25px;
+	color: #003b1f;
+	margin-left: 15px;
+	margin-top: 5px;
+	width: 400px;
+	height: 50px;
+}
+/* 최근 거래 내역 헤더 */
+.RecentTradeHeader {
+	display: flex;
+	text-align: center;
+	border-bottom: 1px solid darkgray;
+	height: 25px;
+	padding-bottom: 10px;
+}
+
+.RecentHeaderNumber {
+	width: 80px;
+}
+
+.RecentHeaderItem {
+	width: 200px;
+}
+
+.RecentHeaderName {
+	width: 70px;
+}
+
+.RecentHeaderDate {
+	width: 100px;
+}
+
+.RecentHeaderProfit {
+	width: 120px;
+}
+/* 최근 거래 내역 데이터 */
+.RecentTradeContent {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	height: 25px;
+	margin-top: 15px;
+	height: 15px;
+}
+
+.RecentContentNumber {
+	width: 80px;
+}
+
+.RecentContentItem {
+	width: 200px;
+}
+
+.RecentContentName {
+	width: 70px;
+}
+
+.RecentContentDate {
+	width: 100px;
+}
+
+.RecentContentProfit {
+	width: 120px;
+}

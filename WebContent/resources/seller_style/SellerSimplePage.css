@@ -1,0 +1,211 @@
+.notice{
+    position: absolute;
+    left: 120px;
+    top: 8px;
+
+}
+.admin_notice_seller{
+    position: absolute;
+    width: 1400px;
+    height: 150px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 5px;
+    left: 120px;
+    top: 60px;
+}
+
+.kamis{
+    position: absolute;
+    left: 120px;
+    top: 225px;
+}
+
+.kamis_list{
+    position: absolute;
+    width: 1400px;
+    height: 220px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 5px;
+    left: 120px;
+    top: 280px;
+    overflow:scroll;
+}
+.click{
+    position: absolute;
+    width: 17px;
+    left: 650px;
+    opacity: 0.5;
+}
+.order_h1{
+    position:absolute;
+    left: 120px;
+    top: 525px;
+}
+.order_list {
+    position: absolute;
+    width: 690px;
+    height: 200px;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 5px;
+    left: 120px;
+    top: 580px;
+}
+
+.order_list a{
+    text-decoration: none;
+    color: black;
+}
+
+.order_list li{
+    list-style: none;
+}
+
+.today{
+    position: absolute;
+    left: 15px;
+    color: gray;
+}
+
+.new_order{
+    position: absolute;
+    left: 15px;
+    top: 65px;
+}
+
+.new_order_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+
+.COUNT{
+    position: absolute;
+    left: 630px;
+    top: -19px;
+}
+.Delivery{
+    position: absolute;
+    left: 15px;
+    top: 105px;
+}
+
+.Delivery_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+
+.Delevery_end{
+    position: absolute;
+    left: 15px;
+    top: 145px;
+}
+
+.Delevery_end_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+
+.price_list{
+    position: absolute;
+    width: 690px;
+    height: 200px;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 5px;
+    left: 830px;
+    top: 580px;
+}
+
+.price_h1{
+    position:absolute;
+    left: 840px;
+    top: 525px;
+}
+
+.price_list a{
+    text-decoration: none;
+    color: black;
+}
+
+.price_list li{
+    list-style: none;
+}
+
+.today{
+    position: absolute;
+    left: 15px;
+    color: gray;
+}
+
+.new_price{
+    position: absolute;
+    left: 15px;
+    top: 65px;
+}
+
+.new_price_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+
+.Delivery_price{
+    position: absolute;
+    left: 15px;
+    top: 105px;
+}
+
+.Delivery_price_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+
+.order_count{
+    position: absolute;
+    left: 15px;
+    top: 145px;
+}
+
+.order_count_count{
+    position: absolute;
+    left: 610px;
+    font-size: 20px;
+    font-weight: bolder;
+    top: -27px;
+}
+.kamis_table{
+    width: 1380px;
+    text-align: center;
+}
+
+.producttd{
+    text-align: center;
+}
+
+.productth{
+    font-size: 16px;
+	border-bottom: 1px solid rgb(163, 163, 163);
+    height:30px;
+    padding: 10;
+}
+
+.productNameTH{
+    width: 130px;
+}
+
+#boardDatatablesSimple{
+	 width: 1380px;
+    text-align: center;
+}

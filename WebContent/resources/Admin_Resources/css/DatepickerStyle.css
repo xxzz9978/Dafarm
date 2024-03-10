@@ -1,0 +1,30 @@
+#ui-datepicker-div{
+	background-color: white;
+	padding: 10px;
+	border-radius: 1rem;
+	border: solid #198754;
+}
+
+.ui-state-default{
+	text-align: center;
+	margin: 0px 5px;
+}
+
+.ui-datepicker-year{
+	margin-right: 5px;
+}
+
+.ui-datepicker-month{
+	margin-left: 5px;
+}
+
+.startDate>.ui-datepicker-trigger {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+.endDate>.ui-datepicker-trigger {
+    position: absolute;
+    left: 206px;
+    top: 20px;
+}

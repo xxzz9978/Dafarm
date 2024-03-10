@@ -1,0 +1,195 @@
+.product_category {
+	width: 1280px;
+	height: 330px;
+	background-color: #fff;
+	
+	margin-left: 80px;
+	margin-right: 80px;
+
+	/*border-left: 2px dashed rgba(0, 59, 31, 0.5);
+	border-right: 2px dashed rgba(0, 59, 31, 0.5);*/
+	
+	display: flex;
+	
+	color: #fff;
+	
+	font: consale;
+	font-size: 18px;
+	font-weight: 400;
+	
+	/* border-bottom : 1px solid #000; */
+}
+
+/* 날짜로 검색 */
+.search_by_date{
+	flex: 10/2;
+	
+	width: 250px;
+	
+	margin-left: 30px;
+}
+
+.search_by_date > div {
+	margin-top: 20px;
+		
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.search_by_date > div > input{ 
+	margin-top: 10px;
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	
+	width: 210px;
+	height: 30px;
+	
+	padding-left: 10px;
+	
+	border: 1px solid #000;
+	border-radius: 6px;
+	
+	cursor:pointer;
+}
+
+.search_by_date > .search > #search{
+	margin-top:80px;
+	padding-left: 0px;
+	
+	width: 70px;
+	height: 30px;
+}
+/* 판매자명으로 검색 */
+.search_by_seller{
+	flex: 10/2;
+	
+	width: 250px;
+	
+	margin-left: 30px;
+}
+
+.search_by_seller > div {
+	margin-top: 20px;
+		
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.search_by_seller > div > input{ 
+	margin-top: 10px;
+	
+	font-size: 14px;
+	font-weight: bold;
+	
+	width: 210px;
+	height: 30px;
+	
+	padding-left: 10px;
+	
+	border: 1px solid #000;
+	border-radius: 6px;
+}
+
+/* category_1 style 영역*/
+.product_category > .category_1 {
+	flex: 10/4;
+	
+	width: 150px;
+	
+	margin-left: 30px;
+}
+
+.product_category > .category_1 > div{
+	margin-bottom: 10px;
+}
+
+/* category_2_1 style 영역*/
+.product_category > .category_2_1 {
+	display: none;
+	flex: 10/4;
+	
+	width: 500px;
+	margin-left: 30px;
+	border-right: none;
+}
+
+.product_category > .category_2_1 > div{
+	margin-bottom: 10px;
+}
+	
+/* category_2_2 style 영역*/
+.product_category > .category_2_2 {
+	display: none;
+	flex: 10/4;
+	
+	width: 500px;
+	margin-left: 30px;
+	border-right: none;
+}
+
+.product_category > .category_2_2 > .category_2_2-1{
+	float: left;
+	width: 150px;
+	
+}
+
+.product_category > .category_2_2 > .category_2_2-2{
+	float: left;
+	width: 150px;
+	
+}
+
+.product_category > .category_2_2 > .category_2_2-1 > div{
+	margin-bottom: 10px;
+}
+
+.product_category > .category_2_2 > .category_2_2-2 > div{
+	margin-bottom: 10px;
+}
+
+/* category_2_3 style 영역*/
+.product_category > .category_2_3 {
+	display: none;
+	flex: 10/4;
+	
+	width: 500px;
+	margin-left: 30px;
+	border-right: none;
+}
+
+.product_category > .category_2_3 > div{
+	margin-bottom: 10px;
+}
+
+/* category_2_4 style 영역*/
+.product_category > .category_2_4 {
+	display: none;
+	flex: 10/4;
+	
+	width: 500px;
+	margin-left: 30px;
+	border-right: none;
+}
+
+.product_category > .category_2_4 > div{
+	margin-bottom: 10px;
+}
+
+/* category 별 첫번째 줄 상단 마진 주는것들 정리*/
+.product_category > .category_1 > div:first-child{
+	margin-top: 10px;
+}
+.product_category > .category_2_1 > div:first-child{
+	margin-top: 10px;
+}
+.product_category > .category_2_2{
+	margin-top: 10px;
+}
+.product_category > .category_2_3 > div:first-child{
+	margin-top: 10px;
+}
+.product_category > .category_2_4 > div:first-child{
+	margin-top: 10px;
+}

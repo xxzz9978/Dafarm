@@ -1,0 +1,72 @@
+form{
+	border: 1px solid lightgray;
+	padding: 50px;
+	border-radius: 20px; 
+}
+
+.container-fluid {
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	width: 1280px;
+	margin-top: 50px;
+}
+
+.card-body {
+	position: relative;
+	width: auto;
+}
+
+.datatable-selector {
+	width: 100px !important;
+}
+
+h2{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.total_price_line{
+	display: flex;
+	justify-content: center;
+}
+
+.total_price_line2 {
+	width: 1280px;
+	text-align: right;
+}
+
+.paymentbtn{
+	margin-top:50px;
+}
+
+h4{
+	font-size:30px;
+}
+
+.paymentbtn{
+	display: flex;
+	justify-content: center;
+}
+
+.paymentbtn button{
+	width:150px;
+	height: 50px;
+	border: 1px solid #003b1f;
+	border-radius: 10px;
+	background-color: transparent;
+	margin-bottom: 50px;
+	font-size: 17px;
+	font-weight: 700;
+	color: #003b1f;
+}
+
+.paymentbtn button:hover {
+	background-color: #003b1f;
+	color: #fff;
+}

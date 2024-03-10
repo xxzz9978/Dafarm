@@ -1,0 +1,107 @@
+:root{
+	--main_color: #003b1f;
+	
+}
+
+* {
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	color: #000;	
+}
+
+.intro_bg{
+	background-color: rgba(0, 0, 0, 0.05);
+ 	border-bottom: rgba(0, 0, 0, 0.3) groove 0.05px;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	width: 100%;
+ 	height: 500px;
+}
+
+/* advertisement */
+.advertisement {
+	width: 100%;
+	height: 300px;	
+	margin: 10px auto 231px auto;
+}
+
+
+.advertisement > .advertisement_content {
+	flex: 5;
+	width: 100%;
+	margin: auto;
+	height: 300px;
+	/* background-color: rgba(0, 0, 0, 0.2); */
+	text-align: center;
+}
+
+/* 시세 간략화 보기 */
+.amount {
+	position: relative;
+	top: -66px;
+	display:flex;
+	width: 1280px;
+	border-radius: 7px;
+	background-color: #fff;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-top: rgba(0, 0, 0, 0.3) groove 0.05px;
+	border-left: rgba(0, 0, 0, 0.3) groove 0.05px;
+	margin: auto;
+}
+
+.amount > li {
+	height: 132px;
+	flex: 1;
+	
+}
+
+.amount > li > div {
+	text-align: center;
+	margin-top: 37px;
+	height: 57px;
+}
+
+.amount > li:not(:last-child) > div {
+	border-right: 1px solid grey;
+}
+
+.contents_1{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.contents_2{
+	font-size: 18px;
+}
+
+/* 시세표 */
+
+.container-fluid {
+	display: flex;
+	justify-content: center;
+}
+.card {
+	width: 1280px;
+	margin-top: 50px;
+}
+
+.card-body {
+	position: relative;
+	width: auto;
+}
+
+.datatable-empty {
+	height: 500px;
+}
+
+.datatable-container{
+	position: relative;
+}
+
+.datatable-selector {
+	width: 100px !important;
+}
+

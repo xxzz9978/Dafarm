@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.container-fluid {
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	width: 1280px;
+	margin-top: 50px;
+}
+
+.card-body {
+	position: relative;
+	width: auto;
+}
+
+#market_price{
+	height: 500px;
+}
+
+.datatable-container{ 
+	position: relative;
+}
+
+.datatable-selector {
+	width: 100px !important;
+}

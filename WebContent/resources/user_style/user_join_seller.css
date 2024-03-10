@@ -1,0 +1,237 @@
+.join_area{
+	width: 1280px;
+	height: 800px;
+	margin: 25px auto 231px auto;
+	text-align: center;
+}
+
+.join_enter_area{
+	width: 1280px;
+	height: 800px;
+	margin: 25px auto 231px auto;
+	text-align: center;
+	/*background-color: rgba(0, 59, 31, 0.85);*/
+	background-color: #fff;
+	opacity: 0.9;
+	
+	border-top: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-left: 0.01px solid rgba(0, 0, 0, 0.2);
+	
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+	border-radius: 7px;
+	color: #000;
+}
+
+.join_enter_area > .switch_join_form{
+	position: relative;
+	
+	width: 900px;
+	height: 70px;
+	
+	text-align: center;
+	margin: 0px auto;
+	margin-bottom: 0px;
+	
+	font-family: 18px;
+}
+
+.join_enter_area > .switch_join_form > #switch_seller_join{
+	position: absolute;
+	top: 18px;
+	left: 455px;
+	
+	width: 445px;
+	height: 70px;
+	
+	background-color: rgba(0, 59, 31, 0.85);
+	
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+		
+	border-right: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-left: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-top: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid rgba(0, 59, 31, 0.85);
+	
+	border-top-right-radius: 10px;
+	
+	cursor: pointer;
+}
+
+.join_enter_area > .switch_join_form > #switch_user_join {
+	position: absolute;
+	top: 18px;
+	left: 1px;
+	
+	width: 445px;
+	height: 70px;
+	
+	background-color: #fff;
+	
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	
+	border-right: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-left: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-top: 0.01px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid rgba(0, 59, 31, 0.85);
+
+	border-top-left-radius: 10px;
+	
+	cursor: pointer;
+}
+
+.join_enter_area > .seller_join_form{
+	width: 70%;	
+	height: 85%;
+	
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	
+	
+	background-color: rgba(0, 59, 31, 0.05);
+	/*background-color: rgba(255, 255, 255, 1);*/
+	border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+	border-left: 0.5px solid rgba(0, 0, 0, 0.2);
+	
+	box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+	position: relative;
+	
+	text-align: center;
+	margin: 20px auto;
+	margin-top: 20px;
+	display: block; /* 중요 */
+}
+
+.join_enter_area > .seller_join_form > #seller_join_form{
+	position: absolute;
+	top: 20px;  /*중요*/
+	left: 248.5px;
+	
+	width: 400px;
+	height: 600px;
+	
+	font-weight: bold;
+	font-size: 13pt;
+	
+}
+
+.join_enter_area > .seller_join_form > #seller_join_form > li{
+	margin-bottom: 10px;
+	text-align: left;
+	
+}
+
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > li > label {
+	font-size: 12pt;
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > li > input{
+	width: 386px;
+	height: 20px;
+	padding-left: 10px;
+	
+	font-size: 11pt;
+}
+
+.join_enter_area > .seller_join_form > #seller_join_form > li > div{
+	margin-bottom: 5px;
+	text-align: left;
+	
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > li > div > label{
+	font-size: 10pt;
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > li > div > input{
+	width: 386px;
+	height: 15px;
+	padding-left: 10px;
+	
+	font-size: 8pt;
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > .seller_id > input {
+	width: 280px;
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > .seller_id > #seller_id_check_dupli {
+	position: absolute;
+	top: 23px;
+	left: 310px;
+	
+	width:80px;
+	height:34px;
+	
+	font-weight: bold;
+	color: #fff;
+	font-size: 11pt;
+	
+	background-color: rgba(0, 59, 31, 0.85);
+	border: solid 0.2px  rgba(0, 59, 31, 0.85);
+	border-radius: 6px;
+	
+	cursor: pointer;
+}
+
+#seller_join_form > .seller_license {
+	height: 60px;
+}
+ 
+#seller_join_form > .seller_license > p{
+	float:left;
+	width:120px;
+}
+ 
+#seller_join_form > .seller_license > input {
+	height: 30px;
+	border-bottom: 1px solid #000;
+} 
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > .seller_license > .business_report{
+	height: 20px;	
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > .seller_license > .business_report > label{
+	margin-bottom: 20px;	
+}
+
+.join_enter_area > .seller_join_form >
+#seller_join_form > .seller_license > .business_report > input{
+	width: 10px;
+	height: 10px;
+	text-align: left;
+
+}
+
+#seller_join_form > .submit > button{
+	position: absolute;
+	top: 600px;
+	left: 300px;
+	
+	padding:0px;
+	width: 100px;
+	height: 40px;
+	
+	font-size: 11pt;
+	font-weight:bold;
+	color: #fff;
+	
+	background-color: rgba(0, 59, 31, 0.85);
+	border: solid 0.2px  rgba(0, 59, 31, 0.85);
+	border-radius: 8px;
+	
+	cursor: pointer;
+}

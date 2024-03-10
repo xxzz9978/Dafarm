@@ -1,0 +1,28 @@
+
+.container-fluid {
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	width: 1280px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#market_price{
+	width: 1240px;
+	height: 500px;
+}
+
+.datatable-container{
+	position: relative;
+}
+
+.datatable-selector {
+	width: 100px !important;
+}
+
+py-4 bg-light mt-auto{
+	background-color: #000;
+}

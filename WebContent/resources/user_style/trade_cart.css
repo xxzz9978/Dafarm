@@ -1,0 +1,50 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+/*전체 사이즈 지정*/
+.container-fluid{
+   display: flex;
+   justify-content: center;
+}
+.card{
+   width: 1280px;
+   margin-top: 50px;
+}
+.card-body{
+   width: 1280px;
+   height: 500px;
+}
+.datatable-selector{
+   width: 100px !important;
+}
+
+/*메인의 밑 부분*/
+.main_footer{
+    display: flex;
+    justify-content: center;
+}
+.mfooter{
+   width: 1280px;
+   margin-top: 20px;
+   margin-bottom:50px;
+}
+.main_footer input{
+   width: 100px;
+   height: 50px;
+   float: right;
+   background-color: transparent;
+   border: 1px solid lightgray;
+   border-radius: 8px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.main_footer input:hover {
+   border: #003b1f;
+   background-color: #003b1f;
+   color: white;
+}

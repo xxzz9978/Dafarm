@@ -1,0 +1,140 @@
+.SellerStore {
+	position: absolute;
+	width: 1000px;
+	height: 90px;
+	border-bottom: 1px solid black;
+	left: 300px;
+}
+
+.SellerStore {
+	font-size: 30px;
+	top: -20px;
+	padding-bottom: 15px;
+}
+
+.buttonDiv {
+	position: absolute;
+	display: flex;
+	text-align: center;
+	left: 270px;
+	top: 85px;
+}
+
+.selling {
+	position: absolute;
+	left: 30px;
+	width: 500px;
+	border-bottom: 1px solid;
+}
+
+.selling h1 a {
+	width: 500px;
+	text-decoration: none;
+	color: black;
+}
+
+.selling:hover {
+	color: #7bad96;
+	border-bottom: 3px solid #000000;
+}
+
+.stop {
+	position: absolute;
+	left: 530px;
+	width: 500px;
+	border-bottom: 1px solid;
+}
+
+.stop h1 a {
+	width: 500px;
+	text-decoration: none;
+	color: black;
+}
+
+.stop:hover {
+	color: #7bad96;
+	border-bottom: 3px solid #000000;
+}
+
+.SellerGoods {
+	position: absolute;
+	display: flex;
+	width: 975px;
+	height: 130px;
+	border: 1px solid black;
+	top: 170px;
+	left: 300px;
+	padding: 10px 10px 10px 10px;
+}
+
+.SellerGoods img {
+	width: 130px;
+	height: 130px;
+}
+
+.GoodsName {
+	position: absolute;
+	font-size: 20px;
+	left: 150px;
+	font-weight: bold;
+}
+
+.GoodsDetails {
+	position: absolute;
+	font-size: 20px;
+	left: 320px;
+	color: gray;
+	font-weight: bold;
+}
+
+.GoodsQuantity {
+	position: absolute;
+	font-size: 20px;
+	left: 930px;
+	font-weight: bold;
+}
+
+.GoodsPrice {
+	position: absolute;
+	font-size: 20px;
+	left: 150px;
+	top: 55px;
+	font-weight: bold;
+}
+
+.GoodsInfo {
+	position: absolute;
+	font-size: 20px;
+	left: 150px;
+	top: 100px;
+	font-weight: bold;
+}
+
+.GoodsStop {
+	position: absolute;
+	top: 100px;
+	left: 770px;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: white;
+}
+
+.GoodsDelete {
+	position: absolute;
+	top: 100px;
+	left: 880px;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: white;
+}
+
+.plusGoods img {
+	position: absolute;
+	width: 100px;
+	top: 700px;
+	left: 1200px;
+}

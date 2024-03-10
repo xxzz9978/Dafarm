@@ -1,0 +1,279 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.side{
+    position: fixed;
+    width: 270px;
+    height: 1080px;
+    background-color: rgb(255, 255, 255);
+    border-right: 1.5px solid rgb(184, 184, 184);
+    z-index: 2;
+}
+
+.top {
+    position: fixed;
+    width: 1650px;
+    left: 271px;
+    height: 55px;
+    background-color: white;
+    border-bottom: 1.5px solid rgb(184, 184, 184);
+    z-index: 1;
+}
+
+.top a {
+    position: absolute;
+    text-decoration: none;
+    color: gray;
+    left: 1520px;
+    top: 17px;
+}
+
+.DafarmLogo img{
+    position: absolute;
+    left: 65px;
+    width: 150px;
+    top: -15px;
+
+}
+
+.SellerInfo1 {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    top: 105px;
+    left: 33px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.SellerImg img{
+    position: absolute;
+    width: 70px;
+    left: 65px;
+    top:30px;
+}
+
+.SellerImg #seller{
+    position: absolute;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    top: 90px;
+    right: 70px;
+}
+
+.SellerImg #premium{
+    position: absolute;
+    color: gray;
+    font-size: 14px;
+    top: 125px;
+    right: 48px;
+}
+
+.SellerInfo1 button{
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    top: 180px;
+    border-radius: 5px;
+    border: 1px solid rgb(141, 141, 141);
+}
+
+.SellerInfo1 a{
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 14px;
+}
+
+.nav{
+    position: relative;
+    width: 270px;
+    height: 600px;
+    border-top: 1px solid rgb(194, 194, 194);
+    top: 150px;
+}
+
+.simple img{
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
+    background-color: none;
+}
+
+.simple a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.order img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: none;
+}
+
+.order{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 130px;
+}
+
+.order a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.store img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.store{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 210px;
+}
+
+.store a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.premium img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.premium{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 290px;
+}
+
+.premium a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.menu img{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.menu{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 370px;
+}
+
+.menu a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.menu1{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    top: 450px;
+}
+
+.menu1 a{
+    position: absolute;
+    color: #003b1f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.menu1 img{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    margin-left: 22px;
+    background-color: none;
+}
+
+.nav a:hover {
+    filter: invert(54%) sepia(26%) saturate(5346%) hue-rotate(118deg) brightness(101%) contrast(96%);}
+
+
+main{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 1650px;
+    height: auto;
+    min-height: 855px;
+    top: 60px;
+    left: 275px;
+    z-index: 0;
+}
