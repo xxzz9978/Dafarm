@@ -40,7 +40,7 @@ public interface SellerProductMapper {
 			+ "where a1.product_writer_num = a2.seller_num and a1.product_idx = #{product_idx}")
 	SellerProductBean getProductInfo(int product_idx);
 
-	@Update("update product_table set product_name = #{product_name}, product_quantity=#{product_name}, product_weight=#{product_weight}, product_price=#{product_price}, product_description=#{product_description}, "
+	@Update("update product_table set product_name = #{product_name}, product_quantity=#{product_quantity}, product_weight=#{product_weight}, product_price=#{product_price}, product_description=#{product_description}, "
 			+ "product_image=#{product_image, jdbcType=VARCHAR} where product_idx = #{product_idx}")
 	void modifyProductInfo(SellerProductBean modifyProductBean);
 

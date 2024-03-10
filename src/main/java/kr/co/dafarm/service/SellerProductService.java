@@ -76,6 +76,14 @@ public class SellerProductService {
 	}
 	
 	public void modifyProductInfo(SellerProductBean modifyProductBean) {
+		MultipartFile upload_file = modifyProductBean.getUpload_file();
+
+		if (upload_file.getSize() > 0) {
+			String file_name = saveUploadFile(upload_file);
+			System.out.println(file_name);
+			modifyProductBean.setProduct_image(file_name);
+		}
+		modifyProductBean.setProduct_writer_num(loginSellerBean.getSeller_num());
 		sellerProductDao.modifyProductInfo(modifyProductBean);
 	}
 	

@@ -262,7 +262,10 @@ public class SellerBoardController {
 		modifyProductBean.setProduct_price(tempProductBean.getProduct_price());
 		modifyProductBean.setProduct_description(tempProductBean.getProduct_description());
 		modifyProductBean.setProduct_date(tempProductBean.getProduct_date());
+		modifyProductBean.setProduct_image(tempProductBean.getProduct_image());
 		modifyProductBean.setProduct_idx(product_idx);
+		model.addAttribute("modifyProductBean",modifyProductBean);
+		
 		
 		return "seller/board/modify";
 	}
@@ -270,11 +273,10 @@ public class SellerBoardController {
 	@PostMapping("/modify_pro")
 	public String modify_pro(@Valid @ModelAttribute("modifyProductBean") SellerProductBean modifyProductBean,
 			BindingResult result, Model model, @RequestParam("product_idx") int product_idx) {
-		
-		int SellerProductIdx = modifyProductBean.getProduct_idx();
-		System.out.println(SellerProductIdx);
+	
 		model.addAttribute("product_idx",product_idx);
 		sellerProductService.modifyProductInfo(modifyProductBean);
+		System.out.println("셀러 이미지 "+modifyProductBean.getProduct_image());
 		return "seller/board/modify_success";
 	}
 }

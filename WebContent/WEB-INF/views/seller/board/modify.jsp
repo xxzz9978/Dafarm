@@ -47,9 +47,9 @@
 							<div class="harf2">
 							<label for="product_list_image" class="product_list_image">첨부 이미지</label>
 							<div class=imgDIV>
-								<c:if test="${modifyProductBean.product_image != null }">
+								
 									<img src="${path }resources/upload/${modifyProductBean.product_image }" width="100%" />
-								</c:if>
+							
 							</div>	
 								<h5>주의 사항</h5>
 								<p class="notice1">- 상품 사진은 하나만 등록 가능합니다.</p>
