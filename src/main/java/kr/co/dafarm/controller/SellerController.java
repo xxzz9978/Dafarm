@@ -71,7 +71,7 @@ public class SellerController {
 		int count3 = sellerOrderService.getOrderCountByStatus(loginSellerBean.getSeller_num(), "발송대기"); 
 		int count4 = sellerOrderService.getOrderCountByStatus(loginSellerBean.getSeller_num(), "발송완료"); 
 		
-		int sellerProfit = profitService.getProfitPrice(loginSellerBean.getSeller_num());
+		Integer sellerProfit = profitService.getProfitPrice(loginSellerBean.getSeller_num());
 		model.addAttribute("sellerProfit", sellerProfit);
 		model.addAttribute("count", count);
 		model.addAttribute("count1", count1);

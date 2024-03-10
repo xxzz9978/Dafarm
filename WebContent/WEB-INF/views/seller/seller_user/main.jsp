@@ -183,7 +183,18 @@ today1 = sf1.format(date);
 				<tr class="tabletr">
 					
 				<td class="text"><a href="${path }seller/board/order?order_status=결제완료">판매금액</a></td>
-				<td class="count_td"><a href="${path }seller/board/order?order_status=결제완료"><fmt:formatNumber value="${sellerProfit }" pattern="###,###" /></a></td>
+				<td class="count_td">
+    <c:choose>
+        <c:when test="${sellerProfit == null}">
+            <a href="${path }seller/board/order?order_status=결제완료">0</a>
+        </c:when>
+        <c:otherwise>
+            <a href="${path }seller/board/order?order_status=결제완료">
+                <fmt:formatNumber value="${sellerProfit }" pattern="###,###" />
+            </a>
+        </c:otherwise>
+    </c:choose>
+</td>
 				<td class="COUNT">원</td>
 				<td  class="clicktd"><a href="${path }seller/board/order?order_status=결제완료"><img src="${path }/resources/img/click.png" class="click"></a></td>
 					

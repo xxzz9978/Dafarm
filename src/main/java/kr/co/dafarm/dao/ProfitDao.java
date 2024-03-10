@@ -24,7 +24,7 @@ public class ProfitDao {
 		return profitMapper.getProfitList(seller_num);
 	}
 	
-	public int getProfitPrice(int seller_num) {
+	public Integer getProfitPrice(int seller_num) {
 		return profitMapper.getProfitPrice(seller_num);
 	}
 	

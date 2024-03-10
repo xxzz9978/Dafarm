@@ -24,7 +24,7 @@ public class ProfitService {
 		return profitDao.getProfitList(seller_num);
 	}
 	
-	public int getProfitPrice(int seller_num) {
+	public Integer getProfitPrice(int seller_num) {
 		
 		return profitDao.getProfitPrice(seller_num);
 	}

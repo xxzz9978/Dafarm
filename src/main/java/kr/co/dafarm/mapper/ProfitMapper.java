@@ -26,7 +26,7 @@ public interface ProfitMapper {
 	
 	// 판매자 번호로 수익을 조회하는 쿼리
 	@Select("select sum(seller_profit) from seller_profit_table where seller_num = #{seller_num}")
-	int getProfitPrice(@Param("seller_num") int seller_num);
+	Integer getProfitPrice(@Param("seller_num") int seller_num);
 	
 	// 특정 달을 검색해서 해당 수익의 합을 조회하는 쿼리
 	@Select("select to_number(sum(seller_profit)) as total_profit "
