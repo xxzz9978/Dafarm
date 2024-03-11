@@ -80,17 +80,17 @@
 							modelAttribute="modifyOrderBean">
 							<tr class="HeaderContent">
 								<td class="OrderNumber">${sellerOrderBean.order_number }</td>
-								<td class="OrderStatus"> <form:input path="order_status"/> </td>
+								<td class="OrderStatus"> <form:input path="order_status" class="OrderStatus"/> </td>
 								<td class="OrderDate">${sellerOrderBean.order_date }</td>
-								<td class="DeliveryCompany"> <form:input path="delivery_company"/> </td>
-								<td class="DeliveryNumber"> <form:input path="delivery_number"/> </td>
+								<td class="DeliveryCompany"> <form:input path="delivery_company" class="DeliveryCompany"/> </td>
+								<td class="DeliveryNumber"> <form:input path="delivery_number" class="DeliveryNumber"/> </td>
 								<td class="SellerName">${sellerOrderBean.seller_name }</td>
 								<td class="SellerPhone">${sellerOrderBean.seller_phone }</td>
 								<td class="ItemName">${sellerOrderBean.item_name }</td>
 								<td class="ReceiverName">${sellerOrderBean.user_name  }</td>
 								<td class="ReceiverPhone">${sellerOrderBean.user_phone  }</td>
 								<td class="Address">${sellerOrderBean.address }</td>
-								<td class="modifyButton"><form:button>완료</form:button> </td>
+								<td class="modifyButton"><form:button class="buttoncolor">완료</form:button> </td>
 							</tr>
 
 						</form:form>
