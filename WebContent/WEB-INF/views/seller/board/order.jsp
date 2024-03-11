@@ -20,25 +20,6 @@
 					<img src="${path }/resources/img/orderIconBold.png">
 					<h1>&nbsp;주문</h1>
 				</div>
-<%-- 
-				<!-- 조회기간쪽 부분 묶어주는 div 입니다. -->
-				<!-- HvnBtn은 마우스 호버 시 효과를 일괄적으로 주기 위해 부여한 클래스입니다. -->
-				<div class="SellerOrderSearch">
-					<div class="OrderTimeSearch">조회 기간</div>
-					<div class="OrderTimeToday HvrBtn">오늘</div>
-					<div class="OrderTimeWeek HvrBtn">1주일</div>
-					<div class="OrderTimeMonth HvrBtn">1개월</div>
-					<div class="OrderTimeEntire HvnBtn">전체</div>
-					<div class="DirectSelect HvrBtn">직접선택</div>
-					<!-- 버튼 형식으로 만들어서, 클릭하면 일정 선택 가능하도록 구현하면 될 것 같습니다. -->
-					<div class="Calender HvrBtn">
-						<img src="${path }/resources/img/orderIcon.png">
-						<!-- 현재 이미지를 캘린더 이미지로 교체 해야합니다! -->
-						&nbsp;&nbsp; XX년 XX월 XX일 ~ XX년 XX월 XX일
-						<!-- 아직 미구현 부분. "직접선택" 버튼이랑 연동되게 만들어야 할 것 같습니다. -->
-					</div>
-				</div>
- --%>
 				<!-- 배송 관련 박스 부분들 묶어주는 div 입니다. -->
 				<div class="OrderCountBox">
 					<div class="CountBox HvrBtn">
@@ -91,7 +72,7 @@
 							<th class="ReceiverName">구매자</th>
 							<th class="ReceiverPhone">구매자전화번호</th>
 							<th class="Address">주소</th>
-							<th>수정버튼</th>
+							<th class="modifyButton">수정버튼</th>
 							<!-- <th class="AddressNumber">우편번호</th> -->
 						</tr>
 					</thead>
@@ -109,7 +90,7 @@
 								<td class="ReceiverName">${obj.user_name  }</td>
 								<td class="ReceiverPhone">${obj.user_phone  }</td>
 								<td class="Address">${obj.address }</td>
-								<td><a href="${path }seller/board/order_modify?order_number=${obj.order_number } "><button>수정하기</button></a></td>
+								<td class="modifyButton"><a href="${path }seller/board/order_modify?order_number=${obj.order_number } "><button>수정</button></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
