@@ -52,8 +52,8 @@ public class SellerOrderDao {
 		return sellerOrderMapper.getOrderCountByStatus(seller_num, order_status);
 	}
 	
-	public void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean) {
-		sellerOrderMapper.modifySellerOrderInfo(modifySellerOrderBean);
+	public void modifySellerOrderInfo(int order_number, String order_status, String delivery_company, String delivery_number) {
+		sellerOrderMapper.modifySellerOrderInfo(order_number, order_status, delivery_company, delivery_number);
 	}
 
 }

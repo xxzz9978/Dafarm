@@ -94,9 +94,9 @@ public class SellerOrderService {
 		return sellerOrderDao.getOrderCountByStatus(seller_num, order_status);
 	}
 	
-	public void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean) {
+	public void modifySellerOrderInfo(int order_number, String order_status, String delivery_company, String delivery_number)  {
 				
-		sellerOrderDao.modifySellerOrderInfo(modifySellerOrderBean);
+		sellerOrderDao.modifySellerOrderInfo(order_number, order_status, delivery_company, delivery_number);
 	}
 
 }

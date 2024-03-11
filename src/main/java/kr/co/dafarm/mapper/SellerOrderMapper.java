@@ -75,10 +75,11 @@ public interface SellerOrderMapper {
 			+ "where seller_num = #{seller_num} and order_number = #{order_number}")
 	SellerOrderBean getOrderListByOrderNumber(@Param("seller_num") int seller_num, @Param("order_number") int order_number);
 	
+	// 주문 테이블에서 판매자 고유 번호와 주문 번호를 조회해 그 값을 업데이트 하는 쿼리
 	@Update("update seller_order_table "
-			+ "set order_status = #{order_status}, "
-			+ "delivery_company = #{delivery_company}, delivery_number = #{delivery_number}")
-	void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean);
+			+ "set order_status = #{order_status}, delivery_company = #{delivery_company}, delivery_number = #{delivery_number} "
+			+ "where order_number = #{order_number}")
+	void modifySellerOrderInfo(@Param("order_number") int order_number, @Param("order_status") String order_status, @Param("delivery_company") String delivery_company, @Param("delivery_number") String delivery_number);
 	
 	// 주문 테이블에서 판매자 고유 번호를 조회해 그 데이터들의 수를 반환하는 쿼리
 	@Select("select count(*) as cnt "

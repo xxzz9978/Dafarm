@@ -96,8 +96,8 @@
 					</thead>
 					<tbody>
 						<form:form method="post"
-							action="${path }seller/board/order_modify_pro"
-							modelAttribute="modifySellerOrderBean">
+							action="${path }seller/board/order_modify_pro?order_number=${sellerOrderBean.order_number }"
+							modelAttribute="modifyOrderBean">
 							<tr class="HeaderContent">
 								<td class="OrderNumber">${sellerOrderBean.order_number }</td>
 								<td class="OrderStatus"> <form:input path="order_status"/> </td>
