@@ -6,8 +6,10 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.session.RowBounds;
 
+import kr.co.dafarm.bean.SellerBean;
 import kr.co.dafarm.bean.SellerOrderBean;
 
 public interface SellerOrderMapper {
@@ -64,6 +66,19 @@ public interface SellerOrderMapper {
 			+ "from seller_order_table "
 			+ "where seller_num = #{seller_num} and order_date between #{order_date_from} and #{order_date_to}")
 	List<SellerOrderBean> getOrderListByBetweenDate(@Param("seller_num") int seller_num, @Param("order_date_from") String order_date_from, @Param("order_date_to") String order_date_to);
+	
+	// 주문 테이블에서 판매자 고유 번호와 주문 번호를 조회해 그 값을 반환하는 쿼리
+	@Select("select order_number, order_status, TO_CHAR(order_date, 'YYYY-MM-DD') AS order_date, delivery_company, "
+			+ "delivery_number, seller_name, seller_phone, item_name, user_name, user_phone, "
+			+ "address, seller_num, user_num "
+			+ "from seller_order_table "
+			+ "where seller_num = #{seller_num} and order_number = #{order_number}")
+	SellerOrderBean getOrderListByOrderNumber(@Param("seller_num") int seller_num, @Param("order_number") int order_number);
+	
+	@Update("update seller_order_table "
+			+ "set order_status = #{order_status}, "
+			+ "delivery_company = #{delivery_company}, delivery_number = #{delivery_number}")
+	void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean);
 	
 	// 주문 테이블에서 판매자 고유 번호를 조회해 그 데이터들의 수를 반환하는 쿼리
 	@Select("select count(*) as cnt "

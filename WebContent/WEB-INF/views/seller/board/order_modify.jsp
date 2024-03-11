@@ -20,7 +20,7 @@
 					<img src="${path }/resources/img/orderIconBold.png">
 					<h1>&nbsp;주문</h1>
 				</div>
-<%-- 
+				<%-- 
 				<!-- 조회기간쪽 부분 묶어주는 div 입니다. -->
 				<!-- HvnBtn은 마우스 호버 시 효과를 일괄적으로 주기 위해 부여한 클래스입니다. -->
 				<div class="SellerOrderSearch">
@@ -91,27 +91,29 @@
 							<th class="ReceiverName">구매자</th>
 							<th class="ReceiverPhone">구매자전화번호</th>
 							<th class="Address">주소</th>
-							<th>수정버튼</th>
 							<!-- <th class="AddressNumber">우편번호</th> -->
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var='obj' items="${orderList }">
+						<form:form method="post"
+							action="${path }seller/board/order_modify_pro"
+							modelAttribute="modifySellerOrderBean">
 							<tr class="HeaderContent">
-								<td class="OrderNumber">${obj.order_number }</td>
-								<td class="OrderStatus">${obj.order_status }</td>
-								<td class="OrderDate">${obj.order_date }</td>
-								<td class="DeliveryCompany">${obj.delivery_company }</td>
-								<td class="DeliveryNumber">${obj.delivery_number }</td>
-								<td class="SellerName">${obj.seller_name }</td>
-								<td class="SellerPhone">${obj.seller_phone }</td>
-								<td class="ItemName">${obj.item_name }</td>
-								<td class="ReceiverName">${obj.user_name  }</td>
-								<td class="ReceiverPhone">${obj.user_phone  }</td>
-								<td class="Address">${obj.address }</td>
-								<td><a href="${path }seller/board/order_modify?order_number=${obj.order_number } "><button>수정하기</button></a></td>
+								<td class="OrderNumber">${sellerOrderBean.order_number }</td>
+								<td class="OrderStatus"> <form:input path="order_status"/> </td>
+								<td class="OrderDate">${sellerOrderBean.order_date }</td>
+								<td class="DeliveryCompany"> <form:input path="delivery_company"/> </td>
+								<td class="DeliveryNumber"> <form:input path="delivery_number"/> </td>
+								<td class="SellerName">${sellerOrderBean.seller_name }</td>
+								<td class="SellerPhone">${sellerOrderBean.seller_phone }</td>
+								<td class="ItemName">${sellerOrderBean.item_name }</td>
+								<td class="ReceiverName">${sellerOrderBean.user_name  }</td>
+								<td class="ReceiverPhone">${sellerOrderBean.user_phone  }</td>
+								<td class="Address">${sellerOrderBean.address }</td>
+								<td> <form:button>완료</form:button> </td>
 							</tr>
-						</c:forEach>
+
+						</form:form>
 					</tbody>
 				</table>
 

@@ -28,7 +28,6 @@ import kr.co.dafarm.bean.UserBean;
 import kr.co.dafarm.interceptor.AdminLoginCheck;
 import kr.co.dafarm.interceptor.CheckSellerLoginInterceptor;
 import kr.co.dafarm.interceptor.CheckUserLoginInterceptor;
-import kr.co.dafarm.interceptor.SellerPremiumInterceptor;
 import kr.co.dafarm.interceptor.TopMenuInterceptor;
 import kr.co.dafarm.mapper.AdminAccountMapper;
 import kr.co.dafarm.mapper.AdminRevenueMapper;

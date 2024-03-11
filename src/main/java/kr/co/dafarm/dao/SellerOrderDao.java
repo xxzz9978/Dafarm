@@ -40,12 +40,20 @@ public class SellerOrderDao {
 		return sellerOrderMapper.getOrderListByBetweenDate(seller_num, order_date_from, order_date_to);
 	}
 	
+	public SellerOrderBean getOrderListByOrderNumber(int seller_num, int order_number) {
+		return sellerOrderMapper.getOrderListByOrderNumber(seller_num, order_number);
+	}
+	
 	public int getOrderCount(int seller_num) {
 		return sellerOrderMapper.getOrderCount(seller_num);
 	}
 	
 	public int getOrderCountByStatus(int seller_num, String order_status) {
 		return sellerOrderMapper.getOrderCountByStatus(seller_num, order_status);
+	}
+	
+	public void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean) {
+		sellerOrderMapper.modifySellerOrderInfo(modifySellerOrderBean);
 	}
 
 }

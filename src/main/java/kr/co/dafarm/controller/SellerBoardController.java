@@ -82,6 +82,17 @@ public class SellerBoardController {
 		
 		return "seller/board/order";
 	}
+	
+	@GetMapping("/order_modify")
+	public String order_modify(@ModelAttribute("modifySellerOrderBean") SellerOrderBean sellerOrderBean,
+			@RequestParam("order_number") int order_number,
+			Model model) {
+		
+		sellerOrderBean = sellerOrderService.getOrderListByOrderNumber(loginSellerBean.getSeller_num(), order_number);
+		model.addAttribute("sellerOrderBean",sellerOrderBean);
+		
+		return "seller/board/order_modify";
+	}
 
 	@GetMapping("/addPremium")
 	public String addPremium(Model model) {			
@@ -297,4 +308,14 @@ public class SellerBoardController {
 		System.out.println("셀러 이미지 "+modifyProductBean.getProduct_image());
 		return "seller/board/modify_success";
 	}
+	
+	@PostMapping("/order_modify_pro")
+	public String order_modify_pro(@ModelAttribute("modifySellerOrderBean") SellerOrderBean modifySellerOrderBean,
+			Model model) {
+		
+		sellerOrderService.modifySellerOrderInfo(modifySellerOrderBean);
+		
+		return "seller/board/order_modify_success";
+	}
+	
 }

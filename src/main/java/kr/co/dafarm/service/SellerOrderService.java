@@ -81,6 +81,10 @@ public class SellerOrderService {
 		}
 
 	}
+	
+	public SellerOrderBean getOrderListByOrderNumber(int seller_num, int order_number) {
+		return sellerOrderDao.getOrderListByOrderNumber(seller_num, order_number);
+	}
 
 	public int getOrderCount(int seller_num) {
 		return sellerOrderDao.getOrderCount(seller_num);
@@ -88,6 +92,11 @@ public class SellerOrderService {
 
 	public int getOrderCountByStatus(int seller_num, String order_status) {
 		return sellerOrderDao.getOrderCountByStatus(seller_num, order_status);
+	}
+	
+	public void modifySellerOrderInfo(SellerOrderBean modifySellerOrderBean) {
+				
+		sellerOrderDao.modifySellerOrderInfo(modifySellerOrderBean);
 	}
 
 }
