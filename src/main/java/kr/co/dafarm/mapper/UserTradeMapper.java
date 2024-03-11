@@ -2,14 +2,19 @@ package kr.co.dafarm.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import kr.co.dafarm.bean.SellerProductBean;
 import kr.co.dafarm.bean.UserInformationBean;
 import kr.co.dafarm.bean.UserProductBean;
 
 @Mapper
 public interface UserTradeMapper {
+	
+	@Insert("select * from product_table")
+	void addProductInfo(UserProductBean userProductBean);
 
 	@Select("select * from product_table")
 	List<UserProductBean> select_product_table();

@@ -1,10 +1,12 @@
 package kr.co.dafarm.bean;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Component
 public class UserProductBean {
 
+	private MultipartFile upload_file;
 	private String product_name;
 	private String product_price;
 	private String product_weight;
@@ -15,6 +17,14 @@ public class UserProductBean {
 	private Integer product_writer_num;
 	private int product_idx;
 	private String product_date;
+
+	public MultipartFile getUpload_file() {
+		return upload_file;
+	}
+
+	public void setUpload_file(MultipartFile upload_file) {
+		this.upload_file = upload_file;
+	}
 
 	public String getProduct_name() {
 		return product_name;
