@@ -45,7 +45,7 @@ public class SellerProductService {
 	}
 
 	public void addProductInfo(SellerProductBean addProductBean) {
-
+ 
 		MultipartFile upload_file = addProductBean.getUpload_file();
 
 		if (upload_file.getSize() > 0) {

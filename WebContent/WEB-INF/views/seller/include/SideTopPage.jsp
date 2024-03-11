@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>판매자 페이지 사이드, 탑 바 부분</title>
-<link rel="stylesheet" href="${path }/resources/seller_style/SideTopPage.css">
+<link rel="stylesheet" href="${path }resources/seller_style/SideTopPage.css">
 </head>
 <body>
 <body>
@@ -19,7 +19,7 @@
 				<div class="side">
 					<div class="DafarmLogo">
 						<a href="${path }seller/seller_user/main"> <img
-							src="${path }/resources/img/MainColorDAFARMLOGO.png">
+							src="${path }resources/img/MainColorDAFARMLOGO.png">
 						</a>
 					</div>
 
@@ -29,7 +29,7 @@
 
 					<div class="SellerInfo1">
 						<div class="SellerImg">
-							<img src="${path }/resources/img/SellerIcon.png">
+							<img src="${path }resources/img/SellerIcon.png">
 							<p id="seller">판매자</p>
 							<p id="premium">프리미엄 판매자</p>
 						</div>
