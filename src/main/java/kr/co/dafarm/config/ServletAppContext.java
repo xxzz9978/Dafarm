@@ -28,6 +28,7 @@ import kr.co.dafarm.bean.UserBean;
 import kr.co.dafarm.interceptor.AdminLoginCheck;
 import kr.co.dafarm.interceptor.CheckSellerLoginInterceptor;
 import kr.co.dafarm.interceptor.CheckUserLoginInterceptor;
+import kr.co.dafarm.interceptor.SellerPremiumInterceptor;
 import kr.co.dafarm.interceptor.TopMenuInterceptor;
 import kr.co.dafarm.mapper.AdminAccountMapper;
 import kr.co.dafarm.mapper.AdminRevenueMapper;
@@ -145,7 +146,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 		InterceptorRegistration reg3 = registry.addInterceptor(checkSellerLoginInterceptor);
 		// Login 확인 Interceptor 관심사 등록
 		reg3.addPathPatterns("/seller/**");
+
 	}
+
 
 	// === Error Message 등록
 	// ========================================================================
@@ -268,13 +271,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 	// UserPaymentMapper 등록
 	@Bean
 	public MapperFactoryBean<UserPaymentMapper> UserPaymentMapper(SqlSessionFactory factory) throws Exception {
-		MapperFactoryBean<UserPaymentMapper> factoryBean = new MapperFactoryBean<UserPaymentMapper>(UserPaymentMapper.class);
+		MapperFactoryBean<UserPaymentMapper> factoryBean = new MapperFactoryBean<UserPaymentMapper>(
+				UserPaymentMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-	
+
 	// SellerMapper 등록
-	@Bean 
+	@Bean
 	public MapperFactoryBean<SellerMapper> getSellerMapper(SqlSessionFactory factory) throws Exception {
 		MapperFactoryBean<SellerMapper> factoryBean = new MapperFactoryBean<SellerMapper>(SellerMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
@@ -306,20 +310,23 @@ public class ServletAppContext implements WebMvcConfigurer {
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
+
 	@Bean
 	public MapperFactoryBean<AdminTradeLogMapper> AdminTradeLogMapper(SqlSessionFactory factory) throws Exception {
-		MapperFactoryBean<AdminTradeLogMapper> factoryBean = new MapperFactoryBean<AdminTradeLogMapper>(AdminTradeLogMapper.class);
+		MapperFactoryBean<AdminTradeLogMapper> factoryBean = new MapperFactoryBean<AdminTradeLogMapper>(
+				AdminTradeLogMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-	
+
 	@Bean
 	public MapperFactoryBean<SellerNoticeMapper> getSellerNoticeMapper(SqlSessionFactory factory) throws Exception {
-		MapperFactoryBean<SellerNoticeMapper> factoryBean = new MapperFactoryBean<SellerNoticeMapper>(SellerNoticeMapper.class);
+		MapperFactoryBean<SellerNoticeMapper> factoryBean = new MapperFactoryBean<SellerNoticeMapper>(
+				SellerNoticeMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-	
+
 	@Bean
 	public StandardServletMultipartResolver multipartResolver() {
 		return new StandardServletMultipartResolver();

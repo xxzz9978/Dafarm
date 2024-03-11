@@ -1,13 +1,17 @@
 package kr.co.dafarm.bean;
 
-public class AdminPremiumBean {
+public class SellerPremiumBean {
 
 	private int seller_num;
-	
-	private boolean seller_premium_chk;	
-	
+
+	private int seller_premium_chk;
+
 	String seller_premium_date;
 
+	public SellerPremiumBean() {
+		seller_premium_chk = 0;
+	}
+	
 	public int getSeller_num() {
 		return seller_num;
 	}
@@ -16,11 +20,11 @@ public class AdminPremiumBean {
 		this.seller_num = seller_num;
 	}
 
-	public boolean isSeller_premium_chk() {
+	public int getSeller_premium_chk() {
 		return seller_premium_chk;
 	}
 
-	public void setSeller_premium_chk(boolean seller_premium_chk) {
+	public void setSeller_premium_chk(int seller_premium_chk) {
 		this.seller_premium_chk = seller_premium_chk;
 	}
 

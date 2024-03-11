@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,21 +17,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.dafarm.bean.AdminPremiumBean;
-import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.KamisAPIBean;
 import kr.co.dafarm.bean.OrderPageBean;
 import kr.co.dafarm.bean.ProfitBean;
 import kr.co.dafarm.bean.SellerBean;
-import kr.co.dafarm.bean.SellerBoardBean;
-import kr.co.dafarm.bean.SellerBoardPageBean;
 import kr.co.dafarm.bean.SellerOrderBean;
+import kr.co.dafarm.bean.SellerPremiumBean;
 import kr.co.dafarm.bean.SellerPremiumPiechartBean;
 import kr.co.dafarm.bean.SellerProductBean;
-import kr.co.dafarm.bean.UserBoardBean;
-import kr.co.dafarm.bean.UserBoardPageBean;
 import kr.co.dafarm.service.KamisAPIService;
 import kr.co.dafarm.service.ProfitService;
-import kr.co.dafarm.service.SellerNoticeService;
 import kr.co.dafarm.service.SellerOrderService;
 import kr.co.dafarm.service.SellerProductService;
 import kr.co.dafarm.service.SellerService;
@@ -85,7 +78,7 @@ public class SellerBoardController {
 		OrderPageBean orderPageBean = sellerOrderService.getPageBeanCnt(order_status, orderPage);
 		model.addAttribute("orderPageBean", orderPageBean);
 		
-		model.addAttribute("orderPage", orderPage);
+		model.addAttribute("orderPage", orderPage);		
 		
 		return "seller/board/order";
 	}
@@ -103,14 +96,15 @@ public class SellerBoardController {
 	@GetMapping("/seller_payment_success")
 	public String seller_payment_success() {
 		
-		AdminPremiumBean sellerPremiumBean = new AdminPremiumBean();
+		SellerPremiumBean sellerPremiumBean = new SellerPremiumBean();
 		sellerService.addSellerPremiumInfo(sellerPremiumBean);
 		
 		return "seller/board/premium_payment";
 	}
 
 	@GetMapping("/premium")
-	public String premium(Model model) {
+	public String premium(@ModelAttribute("sellerPremiumBean") SellerPremiumBean sellerPremiumBean,
+							Model model) {
 		
 		KamisAPIBean kamisAPIBean = kamisApiService.getKamisAPIInfo();
 		model.addAttribute("kamisAPIBean", kamisAPIBean);
@@ -204,9 +198,13 @@ public class SellerBoardController {
 		
 		List<SellerPremiumPiechartBean> piechartBean = profitService.getPiechartList(loginSellerBean.getSeller_num());
 		model.addAttribute("piechartBean", piechartBean);	
-		
-		
+				
 		return "seller/board/premium";
+	}
+	
+	@GetMapping("/need_premium")
+	public String need_premium() {
+		return "seller/board/need_premium";
 	}
 
 	@GetMapping("/read")

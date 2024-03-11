@@ -7,9 +7,9 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import kr.co.dafarm.bean.AdminPremiumBean;
 import kr.co.dafarm.bean.AdminSellerBoardBean;
 import kr.co.dafarm.bean.SellerBean;
+import kr.co.dafarm.bean.SellerPremiumBean;
 
 public interface SellerMapper {
 	
@@ -76,5 +76,5 @@ public interface SellerMapper {
 	
 	@Select("select * from premium_seller_table "
 			+ "where seller_num = #{seller_num}")
-	AdminPremiumBean getSellerPremiumInfo(@Param("seller_num") int seller_num);
+	SellerPremiumBean getSellerPremiumInfo(@Param("seller_num") int seller_num);
 }

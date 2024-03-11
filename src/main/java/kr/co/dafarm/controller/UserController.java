@@ -1,15 +1,14 @@
 package kr.co.dafarm.controller;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,6 @@ import kr.co.dafarm.bean.SellerBean;
 import kr.co.dafarm.bean.UserBean;
 import kr.co.dafarm.service.SellerService;
 import kr.co.dafarm.service.UserService;
-import kr.co.dafarm.validator.UserValidator;
 
 @Controller
 @RequestMapping("/users/user")
@@ -142,7 +140,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/login_pro_seller")
-	public String login_pro_seller(@Valid @ModelAttribute("tempLoginSellerBean") SellerBean tempLoginSellerBean, BindingResult result) {
+	public String login_pro_seller(@Valid @ModelAttribute("tempLoginSellerBean") SellerBean tempLoginSellerBean, HttpSession session, BindingResult result) {
 		
 		if (result.hasErrors()) {
 			return "users/user/login_seller";
@@ -150,6 +148,7 @@ public class UserController {
 		
 		// DB에 있는 Data중 일치하는 Data를 찾아 Login을 성공한 경우
 		sellerService.getLoginSellerBean(tempLoginSellerBean);
+		session.setAttribute("loginSellerBean", loginSellerBean);
 		
 		if(loginSellerBean.isSellerLogin() == true) {
 			
