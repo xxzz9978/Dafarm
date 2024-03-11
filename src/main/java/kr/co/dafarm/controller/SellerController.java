@@ -27,6 +27,7 @@ import kr.co.dafarm.bean.SellerBean;
 import kr.co.dafarm.bean.SellerBoardBean;
 import kr.co.dafarm.bean.SellerBoardPageBean;
 import kr.co.dafarm.bean.SellerOrderBean;
+import kr.co.dafarm.bean.SellerPremiumBean;
 import kr.co.dafarm.service.KamisAPIService;
 import kr.co.dafarm.service.ProfitService;
 import kr.co.dafarm.service.SellerNoticeService;
@@ -57,10 +58,11 @@ public class SellerController {
 	@Resource(name = "loginSellerBean")
 	private SellerBean loginSellerBean;
 	
-	
 	@GetMapping("/main")
 	public String seller_main(@RequestParam(value = "order_status", defaultValue = "전체") String order_status,
-			@RequestParam(value = "page", defaultValue = "1")int page, Model model) {
+			@RequestParam(value = "page", defaultValue = "1")int page,
+			@ModelAttribute("sellerPremiumBean") SellerPremiumBean sellerPremiumBean,
+			Model model) {
 		KamisAPIBean kamisAPIBean = kamisApiService.getKamisAPIInfo();
 		List<SellerBoardBean> contentList = sellerNoticeService.getContentList(page);
 		
@@ -82,7 +84,8 @@ public class SellerController {
 		model.addAttribute("order_status", order_status);
 		model.addAttribute("page",page);
 	    model.addAttribute("contentList", contentList);
-		model.addAttribute("kamisAPIBean",kamisAPIBean);	
+		model.addAttribute("kamisAPIBean",kamisAPIBean);
+		
 		return "seller/seller_user/main";
 	}
 	
@@ -123,7 +126,6 @@ public class SellerController {
 	    return "seller/seller_user/menu";
 	}
 
-	
 	// 게시판 리스트 제목, 내용 화면전환
 	@GetMapping("/noticeRead")
 	public String noticeRead(@RequestParam("seller_board_num")int seller_board_num,

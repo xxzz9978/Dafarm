@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.co.dafarm.bean.AdminPremiumBean;
 import kr.co.dafarm.bean.AdminSellerBoardBean;
 import kr.co.dafarm.bean.SellerBean;
+import kr.co.dafarm.bean.SellerPremiumBean;
 import kr.co.dafarm.mapper.SellerMapper;
 
 @Repository
@@ -64,7 +64,7 @@ public class SellerDao {
 		sellerMapper.addSellerPremiumInfo(seller_num);
 	}
 	
-	public AdminPremiumBean getSellerPremiumInfo(int seller_num) {
+	public SellerPremiumBean getSellerPremiumInfo(int seller_num) {
 		return sellerMapper.getSellerPremiumInfo(seller_num);
 	}
 }

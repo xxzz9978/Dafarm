@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import kr.co.dafarm.bean.AdminPremiumBean;
 import kr.co.dafarm.bean.AdminSellerBoardBean;
 import kr.co.dafarm.bean.SellerBean;
+import kr.co.dafarm.bean.SellerPremiumBean;
 import kr.co.dafarm.dao.SellerDao;
 
 @Service
@@ -102,12 +103,12 @@ public class SellerService {
 	public List<AdminSellerBoardBean> getNoticeList() {
 		return sellerDao.getNoticeList();
 	}
-	
-	public void addSellerPremiumInfo(AdminPremiumBean sellerPremiumBean) {		
+
+	public void addSellerPremiumInfo(SellerPremiumBean sellerPremiumBean) {
 		sellerDao.addSellerPremiumInfo(loginSellerBean.getSeller_num());
 	}
-	
-	public AdminPremiumBean getSellerPremiumInfo(int seller_num) {
+
+	public SellerPremiumBean getSellerPremiumInfo(int seller_num) {
 		return sellerDao.getSellerPremiumInfo(seller_num);
 	}
 }
