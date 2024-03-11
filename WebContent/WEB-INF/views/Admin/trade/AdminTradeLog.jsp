@@ -41,7 +41,7 @@
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header" style="background-color: #008748; color: white;">
-                                <i class="fas fa-cart-shopping"></i>
+                                <i class="fas fa-sack-dollar"></i>
                                 주문내역
                             </div>
                             <div class="card-body">

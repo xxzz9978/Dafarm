@@ -136,8 +136,6 @@
 											<th class="align-middle text-center border-start border-end">주소</th>
 											<td colspan="3" class="align-middle text-center border-end"><input type="text"
 												class="form-control border-0" value="${orderInfo.address }" readonly></td>
-											
-											
 										</tr>
 
 									</tbody>

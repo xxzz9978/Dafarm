@@ -30,14 +30,24 @@ public class AdminTradeLogService {
 	public AdminProfitBean select_user_info(int user_num){
 		return adminTradeLogDao.select_user_info(user_num);
 	}
-	 public List<AdminOrderBean> main_tradeLog(){
-		 return adminTradeLogDao.main_tradeLog();	 
-		 }
+	
+	public List<AdminOrderBean> main_tradeLog(){
+		return adminTradeLogDao.main_tradeLog();	 
+	}
 	public	List<AdminProfitBean> main_profitLog(){
 		return adminTradeLogDao.main_profitLog();
 	}
+	
 	public AdminProfitBean select_seller_profit(int seller_num) {
 		return adminTradeLogDao.select_profit(seller_num);
+	}
+	
+	public List<AdminOrderBean> selected_orderLog(int seller_num){
+		return adminTradeLogDao.selected_orderLog(seller_num);
+	}
+	
+	public List<AdminProfitBean> selected_profitLog(int seller_num){
+		return adminTradeLogDao.selected_profitLog(seller_num);
 	}
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.dafarm.bean.AdminPremiumBean;
+import kr.co.dafarm.bean.AdminProductBean;
 import kr.co.dafarm.bean.AdminRevenueBean;
 import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.AdminSellerProfitBean;
@@ -87,6 +88,10 @@ public class AdminDbService {
 	
 	public List<AdminSellerProfitBean> selected_date_seller_profit(String startDate, String endDate){
 		return adminSellerDao.selected_date_seller_profit(startDate, endDate);
+	}
+	
+	public List<AdminProductBean> selected_product(int seller_num){
+		return adminSellerDao.selected_product(seller_num);
 	}
 	
 	

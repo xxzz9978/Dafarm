@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.co.dafarm.bean.AdminPremiumBean;
+import kr.co.dafarm.bean.AdminProductBean;
 import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.AdminSellerProfitBean;
 
@@ -83,6 +84,9 @@ public interface AdminSellerMapper {
 	List<AdminSellerProfitBean> selected_date_seller_profit(@Param("startDate") String startDate, @Param("endDate") String endDate);
     
     @Select("select * from premium_seller_table where seller_num = #{seller_num}")
-
     AdminPremiumBean select_premium(int seller_num);
+    
+    @Select("select * from product_table where product_writer_num = #{product_writer_num}")
+    List<AdminProductBean> selected_product(int product_writer_num);
+    
 }

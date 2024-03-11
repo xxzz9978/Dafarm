@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.dafarm.bean.AdminOrderBean;
 import kr.co.dafarm.bean.AdminPremiumBean;
+import kr.co.dafarm.bean.AdminProductBean;
 import kr.co.dafarm.bean.AdminProfitBean;
 import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.AdminUserBean;
@@ -74,6 +76,21 @@ public class AdminTableController {
     	model.addAttribute("adminPremiumBean",adminPremiumBean);
     	model.addAttribute("adminProfitBean",adminProfitBean);
     	return "/Admin/table/AdminSellerInfo";
+    }
+    
+    @GetMapping("/AdminSellerTradeInfo")
+    public String AdminSellerTradeInfo(HttpSession session, @RequestParam("product_writer_num") int product_writer_num, Model model) {
+    	String adminId = (String) session.getAttribute("adminId");
+    	
+        if (adminId == null) {
+        	return "redirect:/Admin/login/not_login";
+        }
+        
+        List<AdminProductBean> adminProductBean = adminDbService.selected_product(product_writer_num);
+        
+        model.addAttribute("adminProductBean", adminProductBean);
+        
+    	return "/Admin/table/AdminSellerTradeInfo";
     }
     
     @GetMapping("/AdminSellerModify")

@@ -87,7 +87,7 @@
 				</nav>
 			</div>
 			<a class="nav-link" href="${path}/Admin/trade/AdminTradeLog">
-				<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+				<div class="sb-nav-link-icon"><i class="fas fa-sack-dollar"></i></div>
 				거래내역
 			</a>
 			<a class="nav-link" href="${path}/Admin/chart/AdminCharts">

@@ -149,6 +149,9 @@
 										value="<fmt:formatNumber value='${formattedProfit}' pattern='#,###'/> 원"
 										readonly></td>
 								</tr>
+								
+							</table>
+							<table class="table">
 								<tr>
 									<th colspan="4" class="align-middle text-center card-header"
 										style="background-color: #008748; color: white;">프리미엄 정보</th>
@@ -177,6 +180,9 @@
 									<button class="btn btn-primary"
 										style="background-color: #008748; border-color: black; color: white;"
 										onclick="location.href='${path}/Admin/table/AdminSellerModify?seller_num=${AdminSellerInfoBean.seller_num}'">수정</button>
+									<button class="btn btn-primary"
+										style="background-color: #0d6efd; border-color: black; color: white;"
+										onclick="location.href='${path}/Admin/table/AdminSellerTradeInfo?product_writer_num=${AdminSellerInfoBean.seller_num}'">상품 등록 내역</button>
 								</div>
 							</div>
 

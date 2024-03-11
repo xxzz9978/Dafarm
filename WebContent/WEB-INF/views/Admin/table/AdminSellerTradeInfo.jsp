@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>다팜 | 판매자 정보</title>
+        <title>다팜 | 판매자 거래 정보</title>
         <!-- DataTables -->
         <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
         <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/javascript"></script>
@@ -33,55 +33,51 @@
 		<div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">판매자 회원정보</h1>
+                        <h1 class="mt-4">판매자 상품 등록 정보</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="${path}/Admin/AdminDashboard">메인</a></li>
+                            <li class="breadcrumb-item"><a href="${path}/Admin/table/AdminSellerTables">판매자 회원 정보</a></li>
                             <li class="breadcrumb-item active">회원 정보</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header" style="background-color: #008748; color: white;">
                                 <i class="fas fa-store me-1"></i>
-                                판매자 정보
+                                상품 등록 정보
                             </div>
                             <div class="card-body">
                                 <table id="sellertablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>판매자 번호</th>
+                                            <th>번호</th>
+                                            <th>가격</th>
+                                            <th>무게</th>
+                                            <th>단위</th>
                                             <th>이름</th>
-                                            <th>아이디</th>
-                                            <th>비밀번호</th>
-                                            <th>이메일</th>
-                                            <th>주소</th>
-                                            <th>가입일자</th>
-                                            <th>　</th>
+                                            <th>설명</th>
+                                            <th>등록 일자</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>판매자 번호</th>
+                                            <th>번호</th>
+                                            <th>가격</th>
+                                            <th>무게</th>
+                                            <th>단위</th>
                                             <th>이름</th>
-                                            <th>아이디</th>
-                                            <th>비밀번호</th>
-                                            <th>이메일</th>
-                                            <th>주소</th>
-                                            <th>가입일자</th>
-                                            <th>　</th>
+                                            <th>설명</th>
+                                            <th>등록 일자</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <c:forEach var="seller" items="${sellerList}">
+                                        <c:forEach var="product" items="${adminProductBean}" >
           								  <tr>
-							                <td>${seller.seller_num}</td>
-							                <td>${seller.seller_name}</td>
-							                <td>${seller.seller_id}</td>
-							                <td>${seller.seller_password}</td>
-							                <td>${seller.seller_email}</td>
-							                <td>${seller.seller_address}</td>
-							                <td>${seller.seller_access_date}</td>
-							                <td>
-							                	<a href="${path}/Admin/table/AdminSellerInfo?seller_num=${seller.seller_num}" class="btn btn-primary btn-sm">정보 수정/삭제</a>
-							                </td>
+							                <td>${product.product_idx}</td>
+							                <td>${product.product_price}</td>
+							                <td>${product.product_weight}</td>
+							                <td>${product.product_quantity}</td>
+							                <td>${product.product_name}</td>
+							                <td>${product.product_description}</td>
+							                <td>${product.product_date}</td>
 							            </tr>
 							        	</c:forEach>
                                     </tbody>
