@@ -47,7 +47,7 @@
 							이미지</label>
 						<div class=imgDIV>
 							<c:if test="${readProductBean.product_image != null}">
-								<img src="${path}/resources/upload/${readProductBean.product_image}" />
+								<img src="${path}resources/upload/${readProductBean.product_image}" />
 							</c:if>
 						</div>
 						<h5>주의 사항</h5>

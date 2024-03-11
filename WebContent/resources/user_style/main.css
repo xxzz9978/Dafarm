@@ -2,14 +2,13 @@
 	--main_color: #003b1f;
 	
 }
-
 * {
 	list-style: none;
 	text-decoration: none;
 	border-collapse: collapse;
 	margin: 0px;
 	padding: 0px;
-	color: #000;	
+	color: #000;
 }
 
 .intro_bg{
@@ -28,6 +27,9 @@
 	margin: 10px auto 231px auto;
 }
 
+.fade2{
+	margin-top: 4px;
+}
 
 .advertisement > .advertisement_content {
 	flex: 5;
@@ -79,13 +81,10 @@
 
 /* 시세표 */
 
-.container-fluid {
+.px-4{
 	display: flex;
 	justify-content: center;
-}
-.card {
-	width: 1280px;
-	margin-top: 50px;
+	margin-top: 0px !important;
 }
 
 .card-body {
