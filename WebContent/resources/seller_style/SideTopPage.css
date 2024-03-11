@@ -113,7 +113,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 50px;
+    top: 35px;
     display: flex;
     align-items: center;
 }
@@ -133,7 +133,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 130px;
+    top: 115px;
 }
 
 .order a{
@@ -162,7 +162,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 210px;
+    top: 195px;
 }
 
 .store a{
@@ -191,7 +191,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 290px;
+    top: 275px;
 }
 
 .premium a{
@@ -208,7 +208,7 @@ body{
 .menu img{
     position: absolute;
     width: 25px;
-    height: 20px;
+    height: 25px;
     margin-left: 22px;
     background-color: none;
 }
@@ -220,7 +220,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 370px;
+    top: 355px;
 }
 
 .menu a{
@@ -241,7 +241,7 @@ body{
     width: 270px;
     height: 40px;
     font-size: 18px;
-    top: 450px;
+    top: 435px;
 }
 
 .menu1 a{
@@ -258,7 +258,7 @@ body{
 .menu1 img{
     position: absolute;
     width: 25px;
-    height: 20px;
+    height: 25px;
     margin-left: 22px;
     background-color: none;
 }
