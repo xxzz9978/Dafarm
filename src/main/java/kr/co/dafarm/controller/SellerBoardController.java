@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.dafarm.bean.AdminPremiumBean;
+import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.KamisAPIBean;
 import kr.co.dafarm.bean.OrderPageBean;
 import kr.co.dafarm.bean.ProfitBean;
@@ -34,10 +36,14 @@ import kr.co.dafarm.service.ProfitService;
 import kr.co.dafarm.service.SellerNoticeService;
 import kr.co.dafarm.service.SellerOrderService;
 import kr.co.dafarm.service.SellerProductService;
+import kr.co.dafarm.service.SellerService;
 
 @Controller
 @RequestMapping("/seller/board")
 public class SellerBoardController {
+	
+	@Autowired
+	private SellerService sellerService;
 	
 	@Autowired
 	private SellerProductService sellerProductService;
@@ -85,7 +91,21 @@ public class SellerBoardController {
 	}
 
 	@GetMapping("/addPremium")
-	public String menu() {
+	public String addPremium(Model model) {			
+		return "seller/board/premium_payment";
+	}
+	
+	@GetMapping("/payment_success")
+	public String premium_succes(Model model) {				
+		return "seller/board/payment_success";
+	}
+	
+	@GetMapping("/seller_payment_success")
+	public String seller_payment_success() {
+		
+		AdminPremiumBean sellerPremiumBean = new AdminPremiumBean();
+		sellerService.addSellerPremiumInfo(sellerPremiumBean);
+		
 		return "seller/board/premium_payment";
 	}
 

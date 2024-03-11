@@ -3,9 +3,11 @@ package kr.co.dafarm.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import kr.co.dafarm.bean.AdminPremiumBean;
 import kr.co.dafarm.bean.AdminSellerBoardBean;
 import kr.co.dafarm.bean.SellerBean;
 
@@ -66,4 +68,13 @@ public interface SellerMapper {
 	// 구매자 특정 글 확인
 	@Select("select * from seller_board where seller_board_num = #{seller_board_num}")
 	AdminSellerBoardBean select_one_seller_board(int seller_board_num);
+	
+	// 판매자 프리미엄 등록
+	@Insert("insert into premium_seller_table (seller_num, seller_premium_chk, seller_premium_date) "
+			+ "values (#{seller_num}, 1, sysdate) ")
+	void addSellerPremiumInfo(int seller_num);
+	
+	@Select("select * from premium_seller_table "
+			+ "where seller_num = #{seller_num}")
+	AdminPremiumBean getSellerPremiumInfo(@Param("seller_num") int seller_num);
 }

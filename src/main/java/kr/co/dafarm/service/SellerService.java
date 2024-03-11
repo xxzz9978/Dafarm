@@ -6,9 +6,11 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import kr.co.dafarm.bean.AdminPremiumBean;
 import kr.co.dafarm.bean.AdminSellerBoardBean;
 import kr.co.dafarm.bean.SellerBean;
 import kr.co.dafarm.dao.SellerDao;
@@ -99,5 +101,13 @@ public class SellerService {
 
 	public List<AdminSellerBoardBean> getNoticeList() {
 		return sellerDao.getNoticeList();
+	}
+	
+	public void addSellerPremiumInfo(AdminPremiumBean sellerPremiumBean) {		
+		sellerDao.addSellerPremiumInfo(loginSellerBean.getSeller_num());
+	}
+	
+	public AdminPremiumBean getSellerPremiumInfo(int seller_num) {
+		return sellerDao.getSellerPremiumInfo(seller_num);
 	}
 }

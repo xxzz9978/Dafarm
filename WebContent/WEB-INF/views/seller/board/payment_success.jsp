@@ -3,5 +3,5 @@
 <c:set var='path' value="${pageContext.request.contextPath }/"/>
 <script>
 	alert("결제가 완료되었습니다.");
-	location.href = "${path}seller/board/premium"
+	location.href = "${path}seller/board/seller_payment_success"
 </script>
