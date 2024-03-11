@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.co.dafarm.bean.AdminProfitBean;
 import kr.co.dafarm.bean.UserInformationBean;
 import kr.co.dafarm.bean.UserProductBean;
 import kr.co.dafarm.mapper.UserTradeMapper;
@@ -15,6 +14,10 @@ public class UserTradeDao {
 
 	@Autowired
 	UserTradeMapper userTradeMapper;
+	
+	public void addProductInfo(UserProductBean userProductBean) {
+		userTradeMapper.addProductInfo(userProductBean);
+	}
 
 	public List<UserProductBean> select_product_table() {
 		return userTradeMapper.select_product_table();

@@ -31,7 +31,7 @@
 								<tbody>
 									<tr>
 										<th class="align-middle text-center">이미지</th>
-										<%-- <td><img src="${path }upload/${product_info.product_image}" width="400px" height="400px"/></td> --%>
+										<td><img src="${path }resources/upload/${product_info.product_image}" width="400px" height="400px"/></td>
 									</tr>
 									<tr>
 										<th class="align-middle text-center">상품명</th>

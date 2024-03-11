@@ -63,13 +63,13 @@
 						</div>
 
 						<div class="menu">
-							<a href="${path }seller/board/addPremium"> <img src="${path }resources/img/menu.png"> &nbsp;
+							<a href="${path }seller/board/addPremium"> <img src="${path }resources/img/premiumSgin.png"> &nbsp;
 								&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 프리미엄 가입
 							</a>
 						</div>
 						
 						<div class="menu1">
-							<a href="${path }seller/seller_user/menu"> <img src="${path }resources/img/menu.png"> &nbsp;
+							<a href="${path }seller/seller_user/menu"> <img src="${path }resources/img/noticeIcon.png"> &nbsp;
 								&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 공지사항
 							</a>
 						</div>
