@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAFARM</title>
 <link rel="stylesheet"
-	href="${path}resources/user_style/board_read.css">
+	href="${path}resources/seller_style/board_read.css">
 <script src="${path}resources/user_script/jquery-3.7.1.min.js"></script>
 <link
 	href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
@@ -17,8 +17,7 @@
 </head>
 <body>
 	<c:import url="/WEB-INF/views/seller/include/SideTopPage.jsp" />
-	<section>
-		<article>
+
 			<main>
 				<div class="main">
 					<div class="back_page">
@@ -52,7 +51,6 @@
 					</div>
 				</div>
 			</main>
-		</article>
-	</section>
+
 </body>
 </html>
