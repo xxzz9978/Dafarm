@@ -159,7 +159,7 @@
 									<td class="align-middle text-center"><input type="text"
 										class="form-control border-0"
 										value="${adminPremiumBean.seller_premium_chk ? 'O' : 'X'}"
-										readonly></td>
+										readonly></td> 
 									<th class="align-middle text-center border-start border-end">프리미엄
 										가입일</th>
 									<td class="align-middle text-center border-end"><input

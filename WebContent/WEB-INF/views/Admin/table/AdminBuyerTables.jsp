@@ -81,7 +81,7 @@
 							                <td>${user.user_email}</td>
 							                <td>${user.user_address}</td>
 											<td>${user.user_access_date}</td>
-											<td><a href="${path}/Admin/table/AdminBuyerInfo?user_num=${user.user_num}" class="btn btn-primary btn-sm">정보 수정/삭제</a></td>
+											<td><a href="${path}/Admin/table/AdminBuyerInfo?user_num=${user.user_num}" class="btn btn-primary btn-sm">상세 정보</a></td>
 							            </tr>
 							        	</c:forEach>     	
                                     </tbody>

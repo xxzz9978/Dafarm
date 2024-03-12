@@ -6,12 +6,12 @@ function buyer_delete(e, user_num) {
     e.preventDefault(); // 기본 동작(페이지 이동)을 막음
     Swal.fire({
         title: "구매자 정보 삭제",
-        text: "삭제 하시겠습니까?",
+        text: "정보를 삭제 하시겠습니까?",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#d33",
         cancelButtonColor: "#008748",
-        confirmButtonText: "삭제",
+        confirmButtonText: "확인",
         cancelButtonText: "취소"
     }).then((result) => {
         if (result.isConfirmed) {

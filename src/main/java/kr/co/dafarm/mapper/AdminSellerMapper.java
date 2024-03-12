@@ -83,6 +83,5 @@ public interface AdminSellerMapper {
 	List<AdminSellerProfitBean> selected_date_seller_profit(@Param("startDate") String startDate, @Param("endDate") String endDate);
     
     @Select("select * from premium_seller_table where seller_num = #{seller_num}")
-
     AdminPremiumBean select_premium(int seller_num);
 }
