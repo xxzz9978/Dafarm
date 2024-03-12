@@ -33,7 +33,7 @@ public interface AdminSellerBoardMapper {
 	AdminSellerBoardBean select_one_seller_board(int seller_board_num);
 	
 	// 구매자 글 수정
-	@Update("update user_board set seller_board=#{user_board_title, jdbcType=VARCHAR}, seller_board_content=#{seller_board_content, jdbcType=VARCHAR} where seller_board_num=#{seller_board_num}")
+	@Update("update seller_board set seller_board_title=#{seller_board_title, jdbcType=VARCHAR}, seller_board_content=#{seller_board_content, jdbcType=VARCHAR} where seller_board_num=#{seller_board_num}")
     void seller_modify_board(AdminSellerBoardBean adminUserBoardBean);
 	
 	// 구매자 글 삭제
