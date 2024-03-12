@@ -20,7 +20,8 @@
                <strong>
                      주소 : 서울 특별시 종로구 101 903호실<br> 
                      회사명 : 솔데스크 <br> 
-                     책임자 : 솔데스크<br> 
+                     <a href="${path}Admin/AdminDashboard" style="text-decoration: none; 
+                     color:#fff; cursor:default;">책임자 : 솔데스크</a><br> 
                      CopyRight ⓒ by 2023 KOVEA All rights reserved.<br> 
                      Design by PSDesign
                </strong>
