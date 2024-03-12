@@ -11,7 +11,7 @@ function seller_delete(e, seller_num) {
         showCancelButton: true,
         confirmButtonColor: "#d33",
         cancelButtonColor: "#008748",
-        confirmButtonText: "삭제",
+        confirmButtonText: "확인",
         cancelButtonText: "취소"
     }).then((result) => {
         if (result.isConfirmed) {

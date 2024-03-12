@@ -54,7 +54,7 @@
                                             <th>이메일</th>
                                             <th>주소</th>
                                             <th>가입일자</th>
-                                            <th>　</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -66,7 +66,7 @@
                                             <th>이메일</th>
                                             <th>주소</th>
                                             <th>가입일자</th>
-                                            <th>　</th>
+                                            <th></th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -79,9 +79,7 @@
 							                <td>${seller.seller_email}</td>
 							                <td>${seller.seller_address}</td>
 							                <td>${seller.seller_access_date}</td>
-							                <td>
-							                	<a href="${path}/Admin/table/AdminSellerInfo?seller_num=${seller.seller_num}" class="btn btn-primary btn-sm">정보 수정/삭제</a>
-							                </td>
+							                <td><a href="${path}/Admin/table/AdminSellerInfo?seller_num=${seller.seller_num}" class="btn btn-primary btn-sm">상세 정보</a></td>
 							            </tr>
 							        	</c:forEach>
                                     </tbody>

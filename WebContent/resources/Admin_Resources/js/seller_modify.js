@@ -6,12 +6,12 @@ function seller_modify(e, seller_num) {
     e.preventDefault(); // 기본 동작(페이지 이동)을 막음
     Swal.fire({
         title: "판매자 정보 수정",
-        text: "수정 하시겠습니까?",
+        text: "수정하신 정보를 저장 하시겠습니까?",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#008748",
         cancelButtonColor: "#d33",
-        confirmButtonText: "수정",
+        confirmButtonText: "저장",
         cancelButtonText: "취소"
     }).then((result) => {
         if (result.isConfirmed) {
