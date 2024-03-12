@@ -129,12 +129,28 @@
    text-align: center;
 }
 
+.OrderStatus{
+	max-width:30px;
+}
+
+.OrderStatus input{
+	max-width:30px;
+}
+
 .DeliveryCompany{
    max-width: 50px;
 }
 
+.DeliveryCompany input {
+	max-width : 50px;
+}
+
 .DeliveryNumber{
    max-width: 100px;
+}
+
+.DeliveryNumber input{
+   max-width: 80px;
 }
 
 .modifyButton{
@@ -145,7 +161,9 @@
    max-width: 70px;
 }
 
-
+.buttoncolor{
+	background-color: white;
+}
 .HeaderContent:not(:last-child) {
    border-right: none; /* 마지막 컬럼을 제외한 모든 헤더의 오른쪽 테두리 제거 */
 }

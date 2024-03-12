@@ -26,18 +26,29 @@ public class AdminTradeLogDao {
 	public AdminOrderBean select_orderLog(int order_number){
 		return adminTradeLogMapper.select_orderLog(order_number);
 	}
+	
 	public AdminProfitBean select_user_info(int user_num){
 		return adminTradeLogMapper.select_user_info(user_num);
 	}
 	
-	 public List<AdminOrderBean> main_tradeLog(){
-		 return adminTradeLogMapper.main_tradeLog();	 
-		 }
-	public	List<AdminProfitBean> main_profitLog(){
+	public List<AdminOrderBean> main_tradeLog(){
+		return adminTradeLogMapper.main_tradeLog();	 
+	}
+	
+	public List<AdminProfitBean> main_profitLog(){
 		return adminTradeLogMapper.main_profitLog();
 	}
 	
 	public AdminProfitBean select_seller_profit(int seller_num) {
 		return adminTradeLogMapper.select_profit(seller_num);
 	}
+	
+	public List<AdminOrderBean> selected_orderLog(int seller_num){
+		return adminTradeLogMapper.selected_orderLog(seller_num);
+	}
+	
+	public List<AdminProfitBean> selected_profitLog(int seller_num){
+		return adminTradeLogMapper.selected_profitLog(seller_num);
+	}
+	
 }

@@ -145,14 +145,6 @@
 									</label>
 								</div>
 							</div>
-							<div class="card-body d-flex justify-content-center">
-								<div class="form-check">
-									<input
-										class="form-check-input buyer-checkbox additional-checkbox"
-										type="checkbox" value="" id="buyerCheckbox2"> <label
-										class="form-check-label" for="buyerCheckbox2"> 추가항목1 </label>
-								</div>
-							</div>
 						</div>
 					</div>
 

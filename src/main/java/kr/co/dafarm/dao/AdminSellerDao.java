@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.dafarm.bean.AdminPremiumBean;
+import kr.co.dafarm.bean.AdminProductBean;
 import kr.co.dafarm.bean.AdminSellerBean;
 import kr.co.dafarm.bean.AdminSellerProfitBean;
 import kr.co.dafarm.mapper.AdminSellerMapper;
@@ -69,9 +70,14 @@ public class AdminSellerDao {
 	public List<AdminSellerProfitBean> selected_date_seller_profit(String startDate, String endDate){
 		return sellerMapper.selected_date_seller_profit(startDate, endDate);
 	}
+	
 	public AdminPremiumBean select_premium(int seller_num) {
-
 		return sellerMapper.select_premium(seller_num);
-
-}
+	}
+	
+	public List<AdminProductBean> selected_product(int seller_num){
+		return sellerMapper.selected_product(seller_num);
+	}
+	
+	
 }

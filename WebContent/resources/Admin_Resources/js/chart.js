@@ -5,6 +5,7 @@ $(document).ready(function() {
     var labels = [];
     var revenue_labels = [];
     var seller_labels = [];
+    var seller_profit_labels = [];
     var user_labels = [];
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
@@ -95,6 +96,20 @@ $(document).ready(function() {
 				    pointHitRadius: 50,
 				    pointBorderWidth: 2,
 				    data: [] // 나중에 값 들어감
+				},
+				{
+				    label: "전체 판매자 수익",
+				    lineTension: 0.3,
+				    backgroundColor: "rgba(54, 162, 235, 0.4)",
+				    borderColor: "rgba(54, 162, 235, 1)",
+				    pointRadius: 5,
+				    pointBackgroundColor: "rgba(241, 242 ,237 ,1)",
+				    pointBorderColor: "rgba(54, 162, 235, 0.8)",
+				    pointHoverRadius: 5,
+				    pointHoverBackgroundColor: "rgba(54, 162, 235, 1)",
+				    pointHitRadius: 50,
+				    pointBorderWidth: 2,
+				    data: [] // 나중에 값 들어감
 				}
             ],
         },
@@ -121,8 +136,10 @@ $(document).ready(function() {
             
             $('#sellerCount').prop('checked', false);
             $('#buyerCount').prop('checked', false);
+            $('#sellerProfit').prop('checked', false);
             hideData(myChart, 4);
             hideData(myChart, 5);
+            hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 0);
@@ -138,8 +155,10 @@ $(document).ready(function() {
             
             $('#sellerCount').prop('checked', false);
             $('#buyerCount').prop('checked', false);
+            $('#sellerProfit').prop('checked', false);
             hideData(myChart, 4);
             hideData(myChart, 5);
+            hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 1);
@@ -155,8 +174,10 @@ $(document).ready(function() {
             
             $('#sellerCount').prop('checked', false);
             $('#buyerCount').prop('checked', false);
+            $('#sellerProfit').prop('checked', false);
             hideData(myChart, 4);
             hideData(myChart, 5);
+            hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 2);
@@ -172,8 +193,10 @@ $(document).ready(function() {
             
             $('#sellerCount').prop('checked', false);
             $('#buyerCount').prop('checked', false);
+            $('#sellerProfit').prop('checked', false);
             hideData(myChart, 4);
             hideData(myChart, 5);
+            hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 3);
@@ -193,15 +216,43 @@ $(document).ready(function() {
 	        $('#revenue_advertising').prop('checked', false);
 	        $('#revenue_membership').prop('checked', false);
 	        $('#buyerCount').prop('checked', false);
+	        $('#sellerProfit').prop('checked', false);
 	        // 다른 데이터를 숨김
 	        hideData(myChart, 0);
 	        hideData(myChart, 1);
 	        hideData(myChart, 2);
 	        hideData(myChart, 3);
 	        hideData(myChart, 5);
+	        hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 4);
+        }
+    });
+    
+    $('#sellerProfit').change(function() {
+        if (this.checked) {
+			updateLabels(seller_profit_labels);
+            // 체크되면 데이터 추가
+            unhideData(myChart, 6);
+            
+			// 다른 체크박스들의 체크를 풀어버림
+	        $('#revenue_total').prop('checked', false);
+	        $('#revenue_commission').prop('checked', false);
+	        $('#revenue_advertising').prop('checked', false);
+	        $('#revenue_membership').prop('checked', false);
+	        $('#buyerCount').prop('checked', false);
+	        $('#sellerCount').prop('checked', false);
+	        // 다른 데이터를 숨김
+	        hideData(myChart, 0);
+	        hideData(myChart, 1);
+	        hideData(myChart, 2);
+	        hideData(myChart, 3);
+	        hideData(myChart, 4);
+	        hideData(myChart, 5);
+        } else {
+            // 체크 해제되면 데이터 제거
+            hideData(myChart, 6);
         }
     });
     
@@ -218,12 +269,14 @@ $(document).ready(function() {
 	        $('#revenue_advertising').prop('checked', false);
 	        $('#revenue_membership').prop('checked', false);
 	        $('#sellerCount').prop('checked', false);
+	        $('#sellerProfit').prop('checked', false);
 	        // 다른 데이터를 숨김
 	        hideData(myChart, 0);
 	        hideData(myChart, 1);
 	        hideData(myChart, 2);
 	        hideData(myChart, 3);
 	        hideData(myChart, 4);
+	        hideData(myChart, 6);
         } else {
             // 체크 해제되면 데이터 제거
             hideData(myChart, 5);
@@ -276,6 +329,7 @@ $(document).ready(function() {
         chart.data.datasets[3].backgroundColor = "rgba(75, 192, 192, 0.4)";
         chart.data.datasets[4].backgroundColor = "rgba(255, 159, 64, 0.4)";
         chart.data.datasets[5].backgroundColor = "rgba(255, 0, 0, 0.4)";
+        chart.data.datasets[6].backgroundColor = "rgba(54, 162, 235, 0.4)";
         chart.update();
     }
 
@@ -385,6 +439,20 @@ $(document).ready(function() {
         });
         
         $.ajax({
+            url: 'adminSellerProfitDate',
+            type: "POST",
+            contentType: "application/json",
+            data: jsonData,
+            success: function(response) {
+                // 서버로부터 받은 응답을 처리하는 코드
+                sellerProfitUpdateChart(response);
+            },
+            error: function(xhr, status, error) {
+                // 에러 처리 코드
+            }
+        });
+        
+        $.ajax({
             url: 'adminBuyerDate',
             type: "POST",
             contentType: "application/json",
@@ -429,6 +497,19 @@ $(document).ready(function() {
             }
         });
         $.ajax({
+            url: 'adminSellerProfitWeek',
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({}),
+            success: function(response) {
+                // 서버로부터 받은 응답을 처리하는 코드
+                sellerProfitUpdateChart(response);
+            },
+            error: function(xhr, status, error) {
+                // 에러 처리 코드
+            }
+        });
+        $.ajax({
             url: 'adminBuyerWeek',
             type: "POST",
             contentType: "application/json",
@@ -467,6 +548,19 @@ $(document).ready(function() {
             success: function(response) {
                 // 서버로부터 받은 응답을 처리하는 코드
                 sellerUpdateChart(response);
+            },
+            error: function(xhr, status, error) {
+                // 에러 처리 코드
+            }
+        });
+        $.ajax({
+            url: 'adminSellerProfitMonth',
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({}),
+            success: function(response) {
+                // 서버로부터 받은 응답을 처리하는 코드
+                sellerProfitUpdateChart(response);
             },
             error: function(xhr, status, error) {
                 // 에러 처리 코드
@@ -544,6 +638,7 @@ $(document).ready(function() {
         for (var i = 0; i < data.length; i++) {
         	seller_count.push(data[i].seller_count);
         	seller_label.push(new Date(data[i].seller_access_date).toLocaleDateString('ko-KR'));
+        	
         }
         // 차트 업데이트
         myChart.data.datasets[4].data = seller_count;
@@ -551,12 +646,42 @@ $(document).ready(function() {
 		seller_labels = seller_label;
         
      	// 체크박스 체크 여부에 따라 데이터셋 숨김 여부 설정
-        myChart.data.datasets[4].hidden = !$('#sellerCount').is(':checked'); 
+        myChart.data.datasets[4].hidden = !$('#sellerCount').is(':checked');
         
         if (!$('#sellerCount').is(':checked')) {
 			
 		} else {
 			updateLabels(seller_label);
+		}
+        
+        myChart.update();
+    }
+    
+    // 판매자 수익 차트를 업데이트하는 함수
+    function sellerProfitUpdateChart(data) {
+ 		
+        // data를 사용하여 차트를 업데이트하는 코드
+        
+        // 데이터 넣을 공간
+        var seller_profit = [];
+        var seller_profit_label = [];
+        for (var i = 0; i < data.length; i++) {
+        	seller_profit.push(data[i].seller_profit);
+        	seller_profit_label.push(new Date(data[i].gen_date).toLocaleDateString('ko-KR'));
+        	
+        }
+        // 차트 업데이트
+        myChart.data.datasets[6].data = seller_profit;
+		
+		seller_profit_labels = seller_profit_label;
+        
+     	// 체크박스 체크 여부에 따라 데이터셋 숨김 여부 설정
+        myChart.data.datasets[6].hidden = !$('#sellerProfit').is(':checked');
+        
+        if (!$('#sellerProfit').is(':checked')) {
+			
+		} else {
+			updateLabels(seller_profit_labels);
 		}
         
         myChart.update();

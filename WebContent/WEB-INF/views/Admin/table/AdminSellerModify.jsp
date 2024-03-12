@@ -157,6 +157,8 @@
 											readonly></td>
 
 									</tr>
+								</table>
+								<table class="table">
 									<tr>
 										<th colspan="4" class="align-middle text-center card-header"
 											style="background-color: #008748; color: white;">프리미엄 정보</th>

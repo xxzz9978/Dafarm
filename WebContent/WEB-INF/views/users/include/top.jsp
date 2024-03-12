@@ -11,7 +11,7 @@
 <body>
 	<div class="header" id="header_id">
 					<a href="${path}main">
-						<img class="logo" src="${path}resources/img/mainLogo.png"/>
+						<img class="logo" src="${path}resources/img/2nd_PJT_LOGO.png"/>
 					</a>
 				
 			<ul class="nav">

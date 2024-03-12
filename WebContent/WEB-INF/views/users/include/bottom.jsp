@@ -10,7 +10,7 @@
 </head>
 <body>
 	<footer>
-		<div>
+		<div class="bottom">
             <img src="${path}resources/img/2nd_PJT_LOGO.png"/>
 		</div>
 		<div>

@@ -131,8 +131,12 @@ $(document).ready(function() {
 		var seller_count = [];
 		var labels = [];
 		for (var i = 0; i < data.length; i++) {
-			seller_count.push(data[i].seller_count);
-			labels.push(new Date(data[i].seller_access_date).toISOString().split('T')[0]); // seller_access_date는 데이터에서 날짜를 나타내는 필드입니다.
+			// 시간대를 고려하여 날짜를 생성
+	        var date = new Date(data[i].seller_access_date + ' UTC'); // 시간대를 UTC로 설정
+	        // 현재 시간대로 변환하여 문자열로 변환
+	        var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+	        seller_count.push(data[i].seller_count);
+	        labels.push(dateString); // 날짜를 라벨에 추가
 		}
 		// 차트 업데이트
 		seller_count_chart.data.datasets[0].data = seller_count;
