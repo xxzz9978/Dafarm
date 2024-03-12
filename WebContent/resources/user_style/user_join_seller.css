@@ -235,3 +235,7 @@
 	
 	cursor: pointer;
 }
+
+#seller_password, #seller_password_check{
+	font-family: none !important;
+}

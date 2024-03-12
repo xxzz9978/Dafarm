@@ -192,3 +192,6 @@
 	
 	cursor: pointer;
 }
+#user_password, #user_password_check{
+	font-family: none !important;
+}

@@ -188,7 +188,7 @@
 	padding: 2px 5px;
 	
 	border: solid 2px #000;
-
+	font-family: none !important;
 	font-size: 15px;
 }
 
