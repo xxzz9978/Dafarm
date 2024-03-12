@@ -82,3 +82,7 @@
     background: white;
     color: rgba(0, 59, 31);
 }
+
+#user_password, #user_password_check{
+	font-family: none !important;
+}
