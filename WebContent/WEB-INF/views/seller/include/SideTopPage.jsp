@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='path' value="${pageContext.request.contextPath }/" />
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -14,7 +13,9 @@
 </head>
 <body>
 <body>
-	<section> <article> <header>
+	<section> 
+	<article> 
+	<header>
 	<div class="side">
 		<div class="DafarmLogo">
 			<a href="${path }seller/seller_user/main"> <img
@@ -30,7 +31,6 @@
 			<div class="SellerImg">
 				<img src="${path }resources/img/SellerIcon.png">
 				<p id="seller">판매자</p>
-			<!-- 	<p id="premium">프리미엄 판매자</p> -->
 			</div>
 			<button>
 				<a href="${path }seller/seller_user/info">회원 정보 수정</a>
@@ -78,8 +78,8 @@
 			</div>
 		</div>
 	</div>
-	</header> <footer> </footer> </article> </section>
+	</header>  
+	</article> 
+	</section>
 </body>
-
-
 </html>
