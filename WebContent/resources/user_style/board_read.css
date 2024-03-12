@@ -47,19 +47,13 @@
 .board_list_btn{
 	display: inline-block;
     line-height: 50px;
-    border: 1px solid #003b1f;
+    border: 2px solid #003b1f;
     border-radius: 10px;
     background-color: transparent;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
 } 
-/*글쓴이라면 보일 수정하기 버튼*/
-/*수정하기버튼*/
-.board_modify_btn:hover{
-	background-color: #003b1f;
-	color: #ffffff;
-}
 /*목록가기버튼*/
 
 .board_list_btn:hover{
@@ -70,31 +64,33 @@
 .contain_border{
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 25px;
+    margin-bottom: 100px;
 }
 
 .main_container{
     width: 1280px;
     height: auto;
-    border: 1px solid #003b1f;
-    margin-bottom: 2%;
+    border: 2px solid #003b1f;
     border-radius: 20px;
 }
 
 .form-grop{
-	border-bottom: 1px solid #003b1f;
+	border-bottom: 2px solid #003b1f;
+	padding: 10px;
 }
 
 .form-grop>label {
     font-size: 40px;
-    font-weight: 600;
-    margin-left: 10px;
+    font-weight: 900;
+    margin: 10px;
+    margin-top: 10px;
 }
 
 .main_head_line_dis{
 	display: flex;
     font-size: 18px;
-    border-bottom: 1px solid #003b1f;
+    border-bottom: 2px solid #003b1f;
     margin-top: 10px;
     padding-bottom: 10px;
 }
