@@ -40,13 +40,6 @@ public class SellerService {
 
 	// 회원가입시 DB에 data를 입력하는 Insert DAO 연결
 	public void addSellerInfo(SellerBean joinSellerBean) {
-
-		// 회원가입 일자 seller_access_date 변수에 값 할당
-		Date currentDate = new Date();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		String formattedDate = dateFormat.format(currentDate);
-		joinSellerBean.setSeller_access_date(formattedDate);
-
 		// 최종 회원가입시 기입된 Data들 SellerBean으로 추가해줌
 		sellerDao.addSellerInfo(joinSellerBean);
 	}

@@ -35,13 +35,6 @@ public class UserService {
 
 	// 회원가입시 DB에 data를 입력하는 Insert DAO 연결 
 	public void addUserInfo(UserBean joinUserBean) {
-		
-		// 회원가입 일자 user_access_date 변수에 값 할당
-		Date currentDate = new Date();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		String formattedDate = dateFormat.format(currentDate);
-		joinUserBean.setUser_access_date(formattedDate);
-		
 		// 최종 회원가입시 기입된 Data들 UserBean으로 추가해줌
 		userDao.addUserInfo(joinUserBean);
 	}

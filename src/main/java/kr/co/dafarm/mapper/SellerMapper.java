@@ -22,7 +22,7 @@ public interface SellerMapper {
 	@Insert("insert into seller_table(seller_num, seller_name, seller_id, seller_password, " + 
 	"seller_phone, seller_email, seller_address, seller_access_date) " +
 	"values (seller_seq.nextval, #{seller_name}, #{seller_id}, #{seller_password}, " + 
-	"#{seller_phone}, #{seller_email}, #{seller_address}, #{seller_access_date}) ")
+	"#{seller_phone}, #{seller_email}, #{seller_address}, sysdate)")
 	void addSellerInfo(SellerBean joinSellerBean);
 	
 	// Seller 회원가입시 Seller_Business Table에도 동시 Insert

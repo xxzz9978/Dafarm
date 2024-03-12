@@ -15,7 +15,7 @@ public interface ProfitMapper {
 
 	// ProfitBean에 데이터를 등록하는 쿼리
 	@Insert("insert into seller_profit_table(seller_num, order_number, seller_profit, gen_date) "
-			+ "values (#{seller_num}, order_seq.currval, #{seller_profit}, #{gen_date})")
+			+ "values (#{seller_num}, order_seq.currval, #{seller_profit}, sysdate)")
 	void addProfit(ProfitBean profitBean);
 	
 	// 판매자 번호로 profit 테이블을 불러오는 쿼리

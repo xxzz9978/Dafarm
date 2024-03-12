@@ -62,12 +62,6 @@ public class PaymentSuccessController {
 			orderBean.setSeller_num(payment_info.get(i).getSeller_num());
 			orderBean.setUser_num(payment_info.get(i).getUser_num());
 
-			// 상품이 결제된 일자 OrderDate에 넣어줌
-			Date currentDate = new Date();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-			String formattedDate = dateFormat.format(currentDate);
-			orderBean.setOrder_date(formattedDate);
-
 			// Seller Order Table에 주문 내역 Insert
 			sellerOrderService.addSellerOrderInfo(orderBean);
 
@@ -78,7 +72,6 @@ public class PaymentSuccessController {
 
 			profitBean.setSeller_num(orderBean.getSeller_num());
 			profitBean.setSeller_profit(total_price);
-			profitBean.setGen_date(orderBean.getOrder_date());
 
 			// Seller Profit Table에 판매자 번호, 주문 번호 그리고 그에 해당하는 계산된 수익값, 거래가 성사된 일자 Insert
 			profitSerivce.addProfit(profitBean);

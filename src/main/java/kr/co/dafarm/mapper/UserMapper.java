@@ -15,7 +15,7 @@ public interface UserMapper {
 	// User 회원가입 : User 회원 가입시 DB에 값이 Insert 되는 sql문
 	@Insert("insert into users (user_num, user_id, user_password, user_name, user_address, user_email, user_phone, user_access_date) "
 			+ "values (user_seq.nextval, #{user_id}, #{user_password}, #{user_name}, "
-			+ "#{user_address}, #{user_email}, #{user_phone}, #{user_access_date})")
+			+ "#{user_address}, #{user_email}, #{user_phone}, sysdate)")
 	void addUserInfo(UserBean joinUserBean);
 	// #{user_num} -> user_seq.nextval 시퀀스로 차후 변경 필요
 	
