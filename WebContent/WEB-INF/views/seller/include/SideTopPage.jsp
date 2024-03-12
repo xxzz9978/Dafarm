@@ -30,7 +30,7 @@
 			<div class="SellerImg">
 				<img src="${path }resources/img/SellerIcon.png">
 				<p id="seller">판매자</p>
-				<p id="premium">프리미엄 판매자</p>
+			<!-- 	<p id="premium">프리미엄 판매자</p> -->
 			</div>
 			<button>
 				<a href="${path }seller/seller_user/info">회원 정보 수정</a>
