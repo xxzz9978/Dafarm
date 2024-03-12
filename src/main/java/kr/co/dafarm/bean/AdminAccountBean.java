@@ -47,7 +47,5 @@ public class AdminAccountBean {
 	public void setAdminLogin(boolean adminLogin) {
 		this.adminLogin = adminLogin;
 	}
-	
-	
-	
+
 }
