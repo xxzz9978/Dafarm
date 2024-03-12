@@ -222,8 +222,12 @@ public class SellerBoardController {
 
 		List<SellerPremiumPiechartBean> piechartBean = profitService.getPiechartList(loginSellerBean.getSeller_num());
 		model.addAttribute("piechartBean", piechartBean);
+		
+		if(sellerService.getSellerPremiumInfo(loginSellerBean.getSeller_num()) != null) {
+			return "seller/board/premium";
+		}
 
-		return "seller/board/premium";
+		return "seller/board/need_premium";
 	}
 
 	@GetMapping("/need_premium")
