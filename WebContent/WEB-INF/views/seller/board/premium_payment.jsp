@@ -83,8 +83,9 @@
 		</script>
 
 		<div class="main_body">
-			<label>DAFARM에서 상품등록 5개 이상 가능 및 프리미엄 관리 페이지 사용 가능</label> <label>12,000원/월
-				* VAT 포함 * 취소 불가</label>
+			<label>DAFARM에서 단 월 12,000원 으로</label> 
+			<label>수익과 관련된 그래프와 수많은 데이터를 관리해주는 프리미엄 관리 혜택을 누려보세요!</label>
+			<label>12,000원/월 * VAT 포함 * 취소 불가</label>
 			<div class="main_btn">
 				<button class="registBtn" onclick="requestPay()">DAFARM
 					Premium 가입</button>
